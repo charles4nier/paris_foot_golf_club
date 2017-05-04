@@ -1,0 +1,57 @@
+.flexRow, .flexCol {
+  display: flex;
+}
+
+.alignCenter {
+  align-items: center;
+}
+
+.justifyCenter {
+  justify-content: center;
+}
+
+a {
+  color: #ffffff;
+}
+
+a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+header, main {
+  padding: 0;
+}
+
+header div {
+  height: 150px;
+
+}
+
+nav {
+  background-color: #080048;
+  padding: 15px 0;
+}
+
+nav li {
+  list-style-type: none;
+  margin: 0 15px 0 16px;;
+  position: relative;
+}
+
+nav :not(li)::after {
+  position: absolute;
+  content: '';
+  right: -15px;
+  width: 1px;
+  height: 20px;
+  background-color:  #ffffff;
+}
+.footGolfClub {
+  border: 1px black solid;
+  width: 100%;
+  height: 100vh;
+  background: url(../img/groupe.jpg) no-repeat center;
+  background-size: cover;
+  background-attachment: scroll;
+ }
