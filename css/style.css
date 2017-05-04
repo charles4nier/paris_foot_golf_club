@@ -63,6 +63,17 @@ nav li:last-child::after {
   background-attachment: scroll;
  }
 
+ /* MAIN */
+
+ main h2 {
+   margin-bottom: 30px;
+   text-align: center;
+ }
+
+ main button {
+   margin-top: 30px;
+ }
+
 .club {
   padding: 20px 80px;
   background-color:#06172d;
@@ -84,3 +95,35 @@ nav li:last-child::after {
 .club a {
  color:#509eb0;
 }
+
+.sport {
+  text-align: center;
+  padding: 20px 80px;
+}
+
+.sport .concept {
+  text-align: center;
+ }
+
+.sport button {
+   float: right;
+
+}
+
+ .sport a {
+   color: #06172d;
+ }
+
+ footer {
+   background-color: #06172d;
+   padding: 20px 80px;
+   color: #ffffff;
+ }
+
+ footer ul {
+   padding: 0;
+ }
+
+ footer li {
+   list-style: none;
+ }
