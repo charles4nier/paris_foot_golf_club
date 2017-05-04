@@ -59,7 +59,15 @@ nav :not(li)::after {
  .club {
    text-align: center;
    padding: 20px 50px;
+   background-color: white;
  }
  .club a {
    color:#509eb0;
+ }
+
+.sport {
+  text-align: center;
+}
+ .sport .concept {
+   text-align: center;
  }
