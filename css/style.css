@@ -33,7 +33,7 @@ header div {
 }
 
 nav {
-  background-color: #080048;
+  background-color: #06172d;
   padding: 15px 0;
 }
 
@@ -63,10 +63,24 @@ nav li:last-child::after {
   background-attachment: scroll;
  }
 
- .club {
-   text-align: center;
-   padding: 20px 50px;
- }
- .club a {
-   color:#509eb0;
- }
+.club {
+  padding: 20px 80px;
+  background-color:#06172d;
+  color: #ffffff;
+}
+
+.club > div {
+  padding: 0 30px;
+}
+
+.club li {
+  list-style-type: none;
+}
+
+.club button {
+  float: right;
+}
+
+.club a {
+ color:#509eb0;
+}
