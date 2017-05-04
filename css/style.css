@@ -62,3 +62,11 @@ nav li:last-child::after {
   background-size: cover;
   background-attachment: scroll;
  }
+
+ .club {
+   text-align: center;
+   padding: 20px 50px;
+ }
+ .club a {
+   color:#509eb0;
+ }
