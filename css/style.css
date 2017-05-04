@@ -59,7 +59,10 @@ nav :not(li)::after {
  .club {
    text-align: center;
    padding: 20px 50px;
-   background-color: white;
+   background-color: #E0F7FA;
+ }
+ .club h2 {
+   color: #080048;
  }
  .club a {
    color:#509eb0;
@@ -67,7 +70,23 @@ nav :not(li)::after {
 
 .sport {
   text-align: center;
+
+}
+.sport h2 {
+  color: #080048;
 }
  .sport .concept {
    text-align: center;
  }
+ .sport .concept h3 {
+
+ }
+
+.boutique a {
+  color:#509eb0;
+}
+.initiation {
+  height: 300px;
+  background: url(../img/footgolf-origin.jpg) no-repeat center;
+  background-size: cover;
+}
