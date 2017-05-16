@@ -2,12 +2,21 @@
   display: flex;
 }
 
+.flexCol {
+  flex-direction: column;
+}
+
 .alignCenter {
   align-items: center;
 }
 
 .justifyCenter {
   justify-content: center;
+}
+
+body {
+  font-family: 'Cabin', sans-serif;
+  font-size: 16px;
 }
 
 a {
@@ -19,17 +28,24 @@ a:hover {
   text-decoration: none;
 }
 
+a button {
+  color: black;
+}
+
 header, main {
   padding: 0;
 }
 
 header div {
   height: 150px;
+}
 
+header a button {
+  color: black;
 }
 
 nav {
-  background-color: #080048;
+  background-color: #06172d;
   padding: 15px 0;
 }
 
@@ -39,19 +55,152 @@ nav li {
   position: relative;
 }
 
-nav :not(li)::after {
+nav li::after {
   position: absolute;
   content: '';
   right: -15px;
+  top: 2px;
   width: 1px;
   height: 20px;
   background-color:  #ffffff;
 }
+
+nav li:last-child::after {
+  display: none;
+}
+
 .footGolfClub {
-  border: 1px black solid;
-  width: 100%;
   height: 100vh;
   background: url(../img/groupe.jpg) no-repeat center;
   background-size: cover;
   background-attachment: scroll;
  }
+
+ /* MAIN */
+
+ main h2 {
+   margin-bottom: 30px;
+   text-align: center;
+   padding: 20px 50px;
+ }
+ .club h2 {
+   color: #ffffff;
+ }
+
+ main button {
+   margin-top: 30px;
+ }
+
+.club {
+  padding: 20px 80px;
+  background-color:#06172d;
+  color: #ffffff;
+}
+
+.club > div {
+  padding: 0 30px;
+}
+
+.club li {
+  list-style-type: none;
+}
+
+.club button {
+  float: right;
+}
+
+.club a {
+ color:#509eb0;
+}
+
+.sport {
+  text-align: center;
+  padding: 20px 80px;
+}
+.sport h2 {
+  color: #323232;
+}
+
+.sport .concept {
+  text-align: center;
+ }
+
+.sport button {
+   float: right;
+}
+
+.sport a {
+ color: #06172d;
+}
+
+.boutique a {
+ color:#509eb0;
+}
+
+.initiation {
+ height: 450px;
+
+}
+
+.equipement {
+ height: 350px;
+}
+
+.inscription {
+  background-color:#06172d;
+  padding: 20px 80px;
+}
+
+.inscription h2 {
+  color: #ffffff;
+}
+
+.inscription input, textarea {
+  width: 300px;
+  margin-bottom: 15px;
+}
+
+.inscription textarea {
+  resize: none;
+  height: 200px;
+}
+/* footer */
+
+
+
+footer {
+  background-color: #06172d;
+  color: #ffffff;
+}
+
+.sponsor {
+  padding: 40px 80px;
+  background-color: #cf2c31;
+}
+
+.sponsor li {
+  margin: 55px 20px;
+}
+
+.sponsor a {
+  float: right;
+}
+
+.contact {
+  padding: 20px 80px;
+}
+
+footer ul {
+ padding: 0;
+}
+
+.contact li {
+ list-style: none;
+}
+
+
+/*     Profil     */
+
+.photoJoueur {
+  margin-top: 50px;
+}
