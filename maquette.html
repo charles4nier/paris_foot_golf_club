@@ -1,3 +1,5 @@
+rdv 22 mai, 17h30
+rdv 7 juin pour version finale
 <!DOCTYPE html>
 <html>
   <head>
@@ -22,8 +24,11 @@
         <ul class="flexRow alignCenter justifyCenter">
           <li><a href="#club">Le club</a></li>
           <li><a href="#sport">Le sport</a></li>
+          <li><a href="#decouverte">Atelier découverte</a></li>
+          <li><a href="#inscription">Rejoindre le club</a></li>
           <li><a href="#boutique">La boutique</a></li>
-          <li><a href="#">S'inscrire</a></li>
+          <li><a href="#sponsor">Sponsoring</a></li>
+          <li><a href="#contact">Nous contacter</a></li>
         </ul>
       </nav>
     </header>
@@ -64,22 +69,38 @@
           <h3>Un trou ..</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
+        <div class="col-md-4 concept">
+          <img src="img/Wind Speed 48-52-50.png" alt="">
+          <h3>Un dress code ..</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
         <a href="more" ><button type="button" name="button">Plus d'informations</button></a>
+        <!-- pointer vers le site de la fédération-->
       </section>
 
-      <section id="boutique" class="row boutique">
-        <div class="col-md-6 initiation">
-          <h2>Nos différents packs d'initiation</h2>
-          <img src="img/footgolf-origin.jpg" alt="" height="300">
-        </div>
-        <div class="col-md-6 equipement flexCol alignCenter justifyCenter">
-          <h2>Découvrez nos équipements</h2>
-          <img src="img/maillot.png" alt="" height="300">
-          <a href="more" ><button type="button" name="button">Plus d'informations</button></a>
-        </div>
+      <section id="decouverte" class="inscription row">
+          <h2>Atelier découverte</h2>
+          <div class="calendarDecouverte">
+            <!-- insérer calendar facilement modifiable sur lequel apparaissent toutes les sessions decouvertes (en vert) -->
+          </div>
+          <div class="">
+            <!-- insérer formulaire avec - nom  - prénom  - tel - heure du début de la session-->
+          </div>
+          <!-- <div class="col-md-6 initiation">
+            <h2>Nos différents packs d'initiation</h2>
+            <img src="img/footgolf-origin.jpg" alt="" height="300">
+          </div> -->
+          <!-- <form class="flexCol justifyCenter alignCenter" action="index.html" method="post">
+            <input type="text" name="" value="" placeholder="Votre nom">
+            <input type="text" name="" value="" placeholder="Votre prénom">
+            <input type="text" name="" value="" placeholder="Age">
+            <input type="text" name="" value="" placeholder="Adresse">
+            <input type="email" name="" value="" placeholder="Ville">
+            <textarea name="name"></textarea>
+            <input type="submit" name="" value="submit"> -->
+          <!-- </form> -->
       </section>
-
-      <!-- <section id="inscription" class="inscription row">
+      <section id="inscription" class="inscription row">
           <h2>Envie de nous rejoindre ?</h2>
           <form class="flexCol justifyCenter alignCenter" action="index.html" method="post">
             <input type="text" name="" value="" placeholder="Votre nom">
@@ -90,11 +111,32 @@
             <textarea name="name"></textarea>
             <input type="submit" name="" value="submit">
           </form>
-      </section> -->
+      </section>
+      <section id="boutique" class="row boutique">
+
+        <div class="col-md-6 equipement flexCol alignCenter justifyCenter">
+          <h2>Découvrez nos équipements</h2>
+          <img src="img/maillot.png" alt="" height="300">
+          <a href="more" ><button type="button" name="button">Plus d'informations</button></a>
+        </div>
+      </section>
+
+      <section id="inscription" class="inscription row">
+          <h2>Envie de nous rejoindre ?</h2>
+          <form class="flexCol justifyCenter alignCenter" action="index.html" method="post">
+            <input type="text" name="" value="" placeholder="Votre nom">
+            <input type="text" name="" value="" placeholder="Votre prénom">
+            <input type="text" name="" value="" placeholder="Age">
+            <input type="text" name="" value="" placeholder="Adresse">
+            <input type="email" name="" value="" placeholder="Ville">
+            <textarea name="name"></textarea>
+            <input type="submit" name="" value="submit">
+          </form>
+      </section>
     </main>
 
     <footer class="container-fluid">
-      <div class="row sponsor text-center">
+      <div id="sponsor" class="row sponsor text-center">
         <h2>Sponsor</h2>
         <ul class="list-inline">
           <li><img src="img/logo_kappa.jpg" alt="" height="70"></li>
@@ -102,7 +144,7 @@
           <li><img src="img/logo_parisien.png" alt="" height="70"></li>
           <li><img src="img/logo_pariscola.png" alt="" height="70"></li>
         </ul>
-        <a href="more" ><button type="button" name="button">Plus d'informations</button></a>
+        <p>Vous voulez nous sponsoriser : <a href="more" ><button type="button" name="button">Plus d'informations</button></a></p>
       </div>
       <aside class="row">
         <div class="col-md-3 text-center contact">
@@ -113,14 +155,14 @@
           </ul>
         </div>
 
-        <div class="col-md-6 contact">
+        <div id="contact" class="col-md-6 contact">
           <p>Contact : <a href="#">paris.footgolf@gmail.com</a></p>
           <ul class="list-inline">
             <li>
               <ul>
                 <li>Yann BERTIN</li>
                 <li>Président</li>
-                <li>06 07 73 27 47</li>
+
               </ul>
             </li>
 
@@ -128,7 +170,7 @@
               <ul>
                 <li>Mickaël LAFON</li>
                 <li>Secrétaire</li>
-                <li>06 25 10 68 80</li>
+
               </ul>
             </li>
 
@@ -136,7 +178,7 @@
               <ul>
                 <li>Guilain BIHAN</li>
                 <li>Trésorier</li>
-                <li>06 43 39 89 59</li>
+
               </ul>
             </li>
           </ul>
