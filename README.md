@@ -1,11 +1,7 @@
-# paris_foot_golf_club
+# Version bêta
 
-Premier commit : Squelette de la page d'accueil
+Implantation de la structure MVC
 
-<<<<<<< HEAD
-#Ajout script SQL Database: footgolf
-=======
-# paris_foot_golf_club Maquette
+Démarrage de la base de données
 
-Maquette terminée.
->>>>>>> c44126416a946a1f2c61a50a28b8198cce3200d0
+Choix du style

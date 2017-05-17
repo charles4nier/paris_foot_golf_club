@@ -202,6 +202,19 @@ input[type=text] {
   letter-spacing: 0.05em;
 }
 
+input[type=radio] {
+  margin-right: 5px;
+}
+
+input[type=submit] {
+  float: right;
+  color: #06172d;
+}
+
+select, option {
+  color: #06172d;
+}
+
 input:focus {
   border-bottom: 1px solid #06172d;
   color: #06172d;
@@ -215,19 +228,12 @@ input:focus ~ .floating-label
 }
 
 input:not(:focus):valid ~ .floating-label {
-   color: white !important;
+   color: white;
    top: -15px;
    font-size: 11px;
 }
 
-input[type=radio] {
-  margin-right: 5px;
-}
 
-input[type=submit] {
-  float: right;
-  color: #06172d;
-}
 /* footer */
 
 
