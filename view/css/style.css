@@ -306,6 +306,9 @@ footer ul {
   padding: 10px;
   border-radius: 5px;
 }
+.e-boutique .formu-achat p {
+  margin-top: -18px;
+}
 .e-boutique .formu-achat .achat .inputcontainer {
   margin-top: 20px;
 }
