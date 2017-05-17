@@ -209,6 +209,10 @@ input[type=radio] {
   margin-right: 5px;
 }
 
+input[type=radio]:checked {
+  background-color: #06172d;
+}
+
 input[type=submit] {
   float: right;
   color: #06172d;
@@ -260,7 +264,8 @@ footer {
 }
 
 .sponsor a {
-  float: right;
+  display: inline-block;
+  margin-top: 35px;
 }
 
 .contact {
