@@ -1,0 +1,270 @@
+.flexRow, .flexCol {
+  display: flex;
+}
+
+.flexCol {
+  flex-direction: column;
+}
+
+.alignCenter {
+  align-items: center;
+}
+
+.justifyCenter {
+  justify-content: center;
+}
+
+.justifyBetween {
+  justify-content: space-between;
+}
+
+.justifyAround {
+  justify-content: space-around;
+}
+
+body {
+  font-family: 'Cabin', sans-serif;
+  font-size: 16px;
+}
+
+a {
+  color: #ffffff;
+}
+
+a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a button {
+  color: black;
+}
+
+header, main {
+  padding: 0;
+}
+
+header div {
+  height: 150px;
+}
+
+header a button {
+  color: black;
+}
+
+nav {
+  background-color: #06172d;
+  padding: 15px 0;
+}
+
+nav li {
+  list-style-type: none;
+  margin: 0 15px 0 16px;;
+  position: relative;
+}
+
+nav li::after {
+  position: absolute;
+  content: '';
+  right: -15px;
+  top: 2px;
+  width: 1px;
+  height: 20px;
+  background-color:  #ffffff;
+}
+
+nav li:last-child::after {
+  display: none;
+}
+
+.footGolfClub {
+  height: 100vh;
+  background: url(../img/groupe.jpg) no-repeat center;
+  background-size: cover;
+  background-attachment: scroll;
+ }
+
+ /* MAIN */
+
+ main h2 {
+   margin-bottom: 30px;
+   text-align: center;
+   padding: 20px 50px;
+ }
+ .club h2 {
+   color: #ffffff;
+ }
+
+ main button {
+   margin-top: 30px;
+ }
+
+.club {
+  padding: 20px 80px;
+  background-color:#06172d;
+  color: #ffffff;
+}
+
+.club > div {
+  padding: 0 30px;
+}
+
+.club li {
+  list-style-type: none;
+}
+
+.club button {
+  float: right;
+}
+
+.club a {
+ color:#509eb0;
+}
+
+.sport {
+  text-align: center;
+  padding: 20px 80px;
+}
+.sport h2 {
+  color: #323232;
+}
+
+.sport .concept {
+  text-align: center;
+ }
+
+.sport button {
+   float: right;
+}
+
+.sport a {
+ color: #06172d;
+}
+
+.boutique a {
+ color:#509eb0;
+}
+
+.initiation {
+ height: 450px;
+
+}
+
+.equipement {
+ height: 350px;
+}
+
+.inscription {
+  background-color:#06172d;
+  padding: 20px 80px;
+  color: white;
+}
+
+.inscription h2 {
+  color: #ffffff;
+}
+
+.enveloppe {
+  background-color: #cf2c31;
+  margin-bottom: 50px;
+  padding: 30px;
+  width: 100%;
+  font-size: 0.9em;
+}
+
+.enveloppe form {
+  margin-top: 30px;
+}
+
+.inputcontainer {
+  position: relative;
+   margin-bottom: 40px;
+}
+
+.floating-label {
+  position: absolute;
+  top: 5px;
+  left: 2px;
+  color: white;
+  transition: all 0.2s ease-in-out;
+  pointer-events: none;
+  font-weight: normal;
+}
+
+input[type=text] {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid white ;
+  padding: 5px 0 5px 5px;
+  color: white;
+  width: 150px;
+  transition: all 0.2s ease-in-out;
+  letter-spacing: 0.05em;
+}
+
+input:focus {
+  border-bottom: 1px solid #06172d;
+  color: #06172d;
+}
+
+input:focus ~ .floating-label
+{
+  color: #06172d;
+  top: -15px;
+  font-size: 11px;
+}
+
+input:not(:focus):valid ~ .floating-label {
+   color: white !important;
+   top: -15px;
+   font-size: 11px;
+}
+
+input[type=radio] {
+  margin-right: 5px;
+}
+
+input[type=submit] {
+  float: right;
+  color: #06172d;
+}
+/* footer */
+
+
+
+footer {
+  background-color: #06172d;
+  color: #ffffff;
+}
+
+.sponsor {
+  padding: 40px 80px;
+  background-color: #cf2c31;
+}
+
+.sponsor li {
+  margin: 55px 20px;
+}
+
+.sponsor a {
+  float: right;
+}
+
+.contact {
+  padding: 20px 80px;
+}
+
+footer ul {
+ padding: 0;
+}
+
+.contact li {
+ list-style: none;
+}
+
+
+/*     Profil     */
+
+.photoJoueur {
+  margin-top: 50px;
+}
