@@ -36,8 +36,34 @@ a:hover {
   text-decoration: none;
 }
 
-a button {
+.btn-colored-background {
+  border-radius: 0;
+  border: 1px solid rgba(255,255,255,0);
+  padding: 10px 15px;
+  background: rgba(255,255,255,1);
+  transition: all .2s ease-in-out;
   color: black;
+}
+
+.btn-colored-background:hover {
+  background: rgba(255,255,255,0);
+  color: white;
+  border: 1px solid rgba(255,255,255,1);
+}
+
+.btn-white-background {
+  border-radius: 0;
+  border: 1px solid rgba(207,44,49,0);
+  padding: 10px 15px;
+  background: rgba(207,44,49,1);
+  transition: all .2s ease-in-out;
+  color: white;
+}
+
+.btn-white-background:hover {
+  background: rgba(207,44,49,0);
+  color: black;
+  border: 1px solid rgba(207,44,49,1);
 }
 
 header, main {
@@ -156,7 +182,7 @@ nav li:last-child::after {
 
 .inscription {
   background-color:#06172d;
-  padding: 20px 80px;
+  padding: 20px 0;
   color: white;
 }
 
@@ -256,7 +282,19 @@ footer {
 
 .sponsor {
   padding: 40px 80px;
-  background-color: #cf2c31;
+  color: black;
+  background-color: white;
+  position: relative;
+}
+
+.sponsor div:first-child::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  right: 55px;
+  width: 2px;
+  height: 200px;
+  border-left: 2px dashed #cf2c31;
 }
 
 .sponsor li {
@@ -266,6 +304,7 @@ footer {
 .sponsor a {
   display: inline-block;
   margin-top: 35px;
+  margin-left: 100px;
 }
 
 .contact {
