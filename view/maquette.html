@@ -151,7 +151,7 @@ rdv 7 juin pour version finale
             <form class="flexRow justifyAround">
 
               <div class="packCompetition">
-               <p><input type="radio" name="pack">Le pack compétition à 100 euros comprenant : </p>
+               <p><input type="radio" name="pack" value="packCompétition">Le pack "compétition" à 100 euros comprenant : </p>
                <ul>
                  <li>La licence AFFG</li>
                  <li>Le droit d'entrée au PFFG</li>
@@ -165,7 +165,7 @@ rdv 7 juin pour version finale
              </div>
 
              <div class="packLoisir">
-              <p><input type="radio" name="pack">Le pack loisirs à 60 euros, comprenant : </p>
+              <p><input type="radio" name="pack" value="packLoisirs">Le pack "loisirs" à 60 euros, comprenant : </p>
               <ul>
                 <li>La licence AFFG</li>
                 <li>Le droit d'entrée au PFFG</li>
@@ -173,7 +173,7 @@ rdv 7 juin pour version finale
                 <li>Un green-fee offer (hors Trophy)</li>
               </ul>
 
-              <div class="">
+              <div class="flexCol">
                 <p>Taille de votre polo :</p>
                 <select>
                   <option value="xs">XS</option>
@@ -190,6 +190,22 @@ rdv 7 juin pour version finale
                   <option value="m">M</option>
                   <option value="l">L</option>
                   <option value="xl">XL</option>
+                </select>
+
+                <p>Taille de la paire de chaussette :</p>
+                <select>
+                  <option value="36">36</option>
+                  <option value="37">37</option>
+                  <option value="38">38</option>
+                  <option value="39">39</option>
+                  <option value="40">40</option>
+                  <option value="41">41</option>
+                  <option value="42">42</option>
+                  <option value="43">43</option>
+                  <option value="44">44</option>
+                  <option value="45">45</option>
+                  <option value="46">46</option>
+                  <option value="47">47</option>
                 </select>
               </div>
 
@@ -214,9 +230,15 @@ rdv 7 juin pour version finale
                 </div>
 
                 <div class="inputcontainer">
-                  <input type="text" class="inputText" name="adresse" id="adresse" required/>
-                  <label class="floating-label">Adresse :</label>
+                  <input type="text" class="inputText" name="sexe" id="sexe" required/>
+                  <label class="floating-label" for="sexe">Sexe :</label>
                 </div>
+
+                <p>Certificat Médical déposé :</p>
+                <label class="cm" for="cm?">Oui :</label>
+                <input  type="radio" name="cm?" value="Oui">
+                <label  class="cm" for="cm?">Non :</label>
+                <input type="radio" name="cm?" value="Non">
               </div>
 
               <div class="">
@@ -226,13 +248,18 @@ rdv 7 juin pour version finale
                 </div>
 
                 <div class="inputcontainer">
-                  <input type="text" class="inputText" name="sexe" id="sexe" required/>
-                  <label class="floating-label" for="sexe">Sexe </label>
+                  <input type="text" class="inputText" name="adresse" id="adresse" required/>
+                  <label class="floating-label">Adresse :</label>
                 </div>
 
                 <div class="inputcontainer">
                   <input type="text" class="inputText" name="telephone" id="telephone" required/>
                   <label class="floating-label" for="telephone">Téléphone :</label>
+                </div>
+
+                <div class="inputcontainer">
+                  <input type="mail" class="inputText" name="mail" id="mail" required/>
+                  <label class="floating-label">Mail :</label>
                 </div>
 
                 <input type="submit" name="" value="Envoyer">
