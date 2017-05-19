@@ -1,5 +1,5 @@
 <?php
-require 'dbaccess.php';
+require 'db_access.php';
 
 function uploadImg ($name, $size, $type, $content) {
   $req = $bdd->prepare('INSERT INTO upload(name, size, type, content) VALUES(:name, :size, :type, :content)');
