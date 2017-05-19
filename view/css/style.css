@@ -113,27 +113,39 @@ nav li:last-child::after {
  /* MAIN */
 
  main h2 {
-   margin-bottom: 30px;
+   margin: 0 0 30px 0;
    text-align: center;
-   padding: 20px 50px;
- }
- .club h2 {
-   color: #ffffff;
  }
 
  main button {
    margin-top: 30px;
  }
 
+
+/*                     Le club                       */
+
+
 .club {
-  padding: 20px 80px;
+  /*border-top: 1px solid white;*/
   background-color:#06172d;
+  color: #ffffff;
+  padding: 35px 0;
+}
+
+.club h2 {
   color: #ffffff;
 }
 
-.club > div {
+/*.club > div {
   padding: 0 30px;
-}
+}*/
+
+/*.club div:last-child {
+  height: 70%;
+  background: url('../img/imgClub2.jpg')  center no-repeat scroll;
+  background-size: cover;
+  border-left: 1px solid white;
+}*/
 
 .club li {
   list-style-type: none;
@@ -147,25 +159,47 @@ nav li:last-child::after {
  color:#509eb0;
 }
 
+
+/*                     Le sport                   */
+
 .sport {
   text-align: center;
-  padding: 20px 80px;
+  border-top: 1px solid white;
 }
+
+.sport .footGolfImgContainer {
+  height: 100%;
+  background: url('../img/footGolf.jpg')  center no-repeat scroll;
+  background-size: cover;
+  border-right: 1px solid white;
+}
+
+.sport .col-md-7 {
+  padding-top: 35px;
+}
+
 .sport h2 {
   color: #323232;
+  margin-bottom: 50px;
 }
 
-.sport .concept {
-  text-align: center;
- }
-
 .sport button {
-   float: right;
+  margin-top: 105px;
 }
 
 .sport a {
  color: #06172d;
 }
+
+/*                découverte              */
+
+ .decouverte, .inscription {
+  background-color:#06172d;
+  padding: 20px 0;
+  color: white;
+}
+
+
 
 .boutique a {
  color:#509eb0;
