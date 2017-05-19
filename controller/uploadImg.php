@@ -1,5 +1,9 @@
 <?php
-require 'issetPost.php'
+
+require 'issetPost.php';
+
+require '../modele/crudDataBase.php.';
+
 
 uploadImg($_FILES['image']['name'], $_FILES['image']['size'], $_FILES['image']['size'], $_FILES['image']['type'],  $content);
 
@@ -12,3 +16,5 @@ if(isset($_POST['drop_id']) && isset($_POST['id_image'])) {
 
 	echo "Drop de l'image $id_image effectué";
 }
+
+?>
