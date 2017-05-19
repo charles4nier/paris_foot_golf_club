@@ -1,7 +1,7 @@
 <?php
 require 'issetPost.php';
 
-require '../modele/crudDataBase';
+require '../modele/crudDataBase.php';
 
 uploadImg($_FILES['image']['name'], $_FILES['image']['size'], $_FILES['image']['size'], $_FILES['image']['type'],  $content);
 

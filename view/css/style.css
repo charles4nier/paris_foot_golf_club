@@ -36,6 +36,10 @@ a:hover {
   text-decoration: none;
 }
 
+form {
+  background-color: #cf2c31;
+}
+
 .btn-colored-background {
   border-radius: 0;
   border: 1px solid rgba(255,255,255,0);
@@ -193,11 +197,47 @@ nav li:last-child::after {
 
 /*                découverte              */
 
- .decouverte, .inscription {
-  background-color:#06172d;
-  padding: 20px 0;
-  color: white;
+.decouverte {
+    background-color:#06172d;
+    color: white;
+ }
+
+ .decouverte h2 {
+   margin-top: 25px;
+ }
+
+.decouverte form {
+  padding: 45px 0 25px 0;
+  margin: 0;
 }
+
+.decouverte form p {
+  margin-top: -20px;
+  margin-bottom: 45px;
+  font-size: 1.8em;
+}
+
+.decouverte input[type=text], .decouverte input[type=mail], .decouverte textarea  {
+  width: 250px;
+}
+
+.decouverte .btn-colored-background {
+  width: 150px;
+}
+
+.decouverte textarea {
+  resize: none;
+  height: 100px;
+  margin-bottom: 25px;
+  color: black;
+}
+
+.decouverte input[type=submit] {
+  width: 150px;
+}
+
+
+
 
 
 
@@ -222,6 +262,12 @@ nav li:last-child::after {
 
 label {
   font-weight: normal;
+}
+
+.inscription {
+ background-color:#06172d;
+ padding: 20px 0;
+ color: white;
 }
 
 .inscription h2 {

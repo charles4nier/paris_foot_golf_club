@@ -80,7 +80,7 @@ rdv 7 juin pour version finale
               <h3>Un dress code</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
-            <a href="more" ><button class="btn-white-background" type="button" name="button">Plus d'informations</button></a>
+            <a href="https://www.footgolf-france.fr/" target="_blank"><button class="btn-white-background" type="button" name="button">Plus d'informations</button></a>
           </div>
         </div>
 
@@ -93,33 +93,53 @@ rdv 7 juin pour version finale
       </section>
 
       <section id="decouverte" class="decouverte row">
-          <h2>Atelier découverte</h2>
+
           <div class="col-md-4">
+            <h2>Atelier découverte</h2>
             <p>Envie d'essayer le footgolf ? <br/>
              Inscivez-vous à un atelier découverte en choisissant une des sessions dans le calendrier ci-dessous.</p>
-           <div class="calendarDecouverte">
+           <div class="calendarDecouverte col-md-4">
              <!-- insérer calendar facilement modifiable sur lequel apparaissent toutes les sessions decouvertes (en vert) -->
            </div>
           </div>
 
           <div class="col-md-4">
             <!-- insérer formulaire avec - nom  - prénom  - tel - heure du début de la session-->
-            <form class="flexRow justifyAround">
+            <form class="flexCol alignCenter justifyCenter">
+              <p>Inscription :</p>
               <div class="inputcontainer">
-                <input type="text" class="inputText" name="prenom" id="prenom" required/>
-                <label class="floating-label">Prénom :</label>
+                <input type="text" class="inputText" name="prenomDecouverte" id="prenomDecouverte" required/>
+                <label class="floating-label" for="prenomDecouverte">Prénom :</label>
               </div>
 
               <div class="inputcontainer">
-                <input type="text" class="inputText" name="nom" id="nom" required/>
-                <label class="floating-label" for="nom">Nom :</label>
+                <input type="text" class="inputText" name="nomDecouverte" id="nomDecouverte" required/>
+                <label class="floating-label" for="nomDecouverte">Nom :</label>
               </div>
+
+              <div class="inputcontainer">
+                <input type="mail" class="inputText" name="mailDecouverte" id="mailDecouverte" required/>
+                <label class="floating-label" for="mailDecouverte">Mail :</label>
+              </div>
+
+              <div class="inputcontainer">
+                <input type="text" class="inputText" name="telDecouverte" id="telDecouverte" required/>
+                <label class="floating-label" for="telDecouverte">Téléphone :</label>
+              </div>
+
+              <div class="inputcontainer">
+                <input type="text" class="inputText" name="refDecouverte" id="refDecouverte" required/>
+                <label class="floating-label" for="refDecouverte">Référence de l'atelier :</label>
+              </div>
+
+              <textarea name="textareaDecouverte" placeholder="Votre message..."></textarea>
+
+              <input class="btn-colored-background" type="submit" name="" value="S'inscire">
+
             </form>
           </div>
       </section>
-      <section id="decouverte" class="decouverte row">
-            <input class="btn-colored-background"type="submit" name="" value="submit">
-          </form>
+
       </section>
       <section id="boutique" class="row boutique">
 
