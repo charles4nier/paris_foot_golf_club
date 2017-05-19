@@ -1,5 +1,4 @@
 <?php
-require 'issetPost.php';
 require 'db_access.php';
 
 function uploadImg ($name, $size, $type, $content) {
