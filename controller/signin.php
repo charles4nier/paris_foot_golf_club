@@ -5,9 +5,6 @@ require '../modele/db_access.php';
 $name = $_POST['login'];
 $pass_hache = sha1($_POST['password']);
 
-var_dump($name);
-var_dump($pass_hache);
-
 $req = $bdd->prepare('SELECT * FROM users WHERE name = :name AND pass = :pass');
 
 $req->execute(array(
