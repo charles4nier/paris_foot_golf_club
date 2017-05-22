@@ -356,3 +356,54 @@ footer ul {
 .e-boutique .formu-achat .achat .inputcontainer {
   margin-top: 20px;
 }
+.sponsoring #why-sponsor h2 {
+  color: #cf2c31;
+}
+.sponsoring #why-sponsor p {
+  text-align: center;
+  padding: 0 20px;
+}
+.sponsoring #sponsor-win h2 {
+  color: #cf2c31;
+}
+.sponsoring #sponsor-win p {
+  text-align: center;
+  padding: 0 20px;
+}
+.sponsoring #packs h2 {
+  color: white;
+}
+.sponsoring #packs p {
+  text-align: center;
+  padding: 0 20px;
+}
+.sponsoring #packs .montant {
+  color: #cf2c31;
+  font-size: 20px;
+  font-weight: 700;
+}
+.sponsoring #packs {
+  background-color: #06172d;
+  padding-bottom: 50px;
+}
+.sponsoring .pack h3 {
+  text-align: center;
+  color: #06172d;
+}
+.sponsoring .pack {
+  padding: 10px 30px;
+  border: 2px solid #cf2c31;
+  margin: 10px;
+  background-color: white;
+}
+.sponsoring .pack p:nth-child(1){
+  text-decoration: underline;
+}
+#formulaire-sponsoring {
+  margin: 50px;
+}
+#formulaire-sponsoring h2 {
+  color: #06172d;
+  padding-top: 0;
+  margin-top: 0;
+}
