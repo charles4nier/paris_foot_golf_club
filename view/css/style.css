@@ -474,8 +474,8 @@ footer ul {
   margin-top: 20px;
 }
 
-.sponsoring #why-sponsor, .sponsoring #sponsor-win {
-  padding: 40px 20px 0 20px;
+.sponsoring #why-sponsor{
+  padding: 40px 20px;
 }
 
 .sponsoring #sponsor-win {
@@ -489,15 +489,9 @@ footer ul {
   text-align: center;
   padding: 0 20px;
 }
-.sponsoring #sponsor-win h2 {
-  color: #cf2c31;
-}
-.sponsoring #sponsor-win p {
-  text-align: center;
-  padding: 0 20px;
-}
 .sponsoring #packs h2 {
   color: white;
+  padding-top: 30px;
 }
 .sponsoring #packs p {
   text-align: center;
