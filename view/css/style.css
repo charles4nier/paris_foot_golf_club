@@ -14,6 +14,9 @@
   justify-content: center;
 }
 
+.justifyEnd {
+  justify-content: flex-end;
+}
 
 .justifyBetween {
   justify-content: space-between;
@@ -82,7 +85,7 @@ header, main {
 }
 
 header div {
-  height: 150px;
+  height: 100px;
 }
 
 header a button {
@@ -136,10 +139,15 @@ nav li:last-child::after {
  /* MAIN */
 
 .accessButtonContainer {
-
-  background: white;
+  margin-bottom: 45px;
+  width: 400px;
 }
 
+.accessButtonContainer .btn-white-background:hover, .sponsor  .btn-white-background:hover{
+  background-color: white !important;
+  color: black !important;
+  border: 1px solid rgba(255,255,255,1);
+}
 
  main h2 {
    margin: 0 0 30px 0;
@@ -193,15 +201,13 @@ nav li:last-child::after {
 
 .sport {
   text-align: center;
-  border-top: 1px solid white;
-  height: auto;
 }
 
-.sport .footGolfImgContainer {
-  height: 100%;
+.footGolfImgContainer {
+  height: 650px;
   background: url('../img/footGolf.jpg') center no-repeat scroll;
   background-size: cover;
-  border-right: 1px solid white;
+  border-top: 1px solid white;
 }
 
 .sport .col-md-7 {
@@ -381,13 +387,24 @@ footer {
 }
 
 .sponsor {
-  padding: 40px 80px;
-  color: black;
-  background-color: white;
-  position: relative;
+  margin-top: 30px;
+  height: 600px;
+  background: url('../img/sponsor.jpg') center fixed;
+  background-size: cover;
+  border-top: 1px solid white;
 }
 
-.sponsor div:first-child::after {
+.sponsor div {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 350px;
+}
+
+.sponsor a {
+  display: inline-block;
+  margin-left: 55%;
+}
+/*.sponsor div:first-child::after {
   content: "";
   position: absolute;
   top: 25px;
@@ -405,7 +422,7 @@ footer {
   display: inline-block;
   margin-top: 35px;
   margin-left: 100px;
-}
+}*/
 
 .contact {
   padding: 20px 80px;
@@ -456,6 +473,15 @@ footer ul {
 .e-boutique .formu-achat .achat .inputcontainer {
   margin-top: 20px;
 }
+
+.sponsoring #why-sponsor, .sponsoring #sponsor-win {
+  padding: 40px 20px 0 20px;
+}
+
+.sponsoring #sponsor-win {
+  padding-bottom: 40px;
+}
+
 .sponsoring #why-sponsor h2 {
   color: #cf2c31;
 }
@@ -492,9 +518,10 @@ footer ul {
 }
 .sponsoring .pack {
   padding: 10px 30px;
-  border: 2px solid #cf2c31;
   margin: 10px;
   background-color: white;
+  max-height: 400px;
+  overflow: auto;
 }
 .sponsoring .pack p:nth-child(1){
   text-decoration: underline;
@@ -502,6 +529,11 @@ footer ul {
 #formulaire-sponsoring {
   margin: 50px;
 }
+
+#formulaire-sponsoring .enveloppe {
+  padding: 30px;
+}
+
 #formulaire-sponsoring h2 {
   color: #06172d;
   padding-top: 0;

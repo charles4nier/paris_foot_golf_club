@@ -45,18 +45,18 @@
       </div>
       <nav class="row text-center">
         <ul class="flexRow alignCenter justifyCenter">
-          <li><a href="#club">Le club</a></li>
+          <li><a href="#accueil">Accueil</a></li>
           <li><a href="#sport">Le sport</a></li>
           <li><a href="#decouverte">Atelier découverte</a></li>
-          <li><a href="#inscription">Rejoindre le club</a></li>
-          <li><a href="#boutique">La boutique</a></li>
-          <li><a href="#sponsor">Sponsoring</a></li>
+          <!-- <li><a href="#inscription">Rejoindre le club</a></li> -->
+          <!-- <li><a href="#boutique">La boutique</a></li>
+          <li><a href="#sponsor">Sponsoring</a></li> -->
           <li><a href="#contact">Nous contacter</a></li>
         </ul>
       </nav>
     </header>
-    <div class="flexCol justifyCe alignCenter footGolfClub">
-      <div class="button accessButtonContainer">
+    <div id="#accueil" class="flexCol justifyEnd alignCenter footGolfClub">
+      <div class="button accessButtonContainer flexRow justifyBetween">
         <button type="button" name="button" class="btn-white-background" data-toggle="modal" data-target="#inscription">S'inscrire au club</button>
         <a href="eboutique.php" target="_blank"><button type="button" name="button" class="btn-white-background">Aller à la boutique</button></a>
       </div>
@@ -72,12 +72,8 @@
             <li>3ème du championnat de France (FootGolf Cup) lors de la saison 2016, six de nos joueurs ont participé à la grande finale de la FootGolf Cup  à Marrakech !</li>
             <li>Mika Lafon, joueur emblématique du club est sélectionné pour la deuxième année consécutive en Equipe de France.</li>
             <li>Le club participe en plus à des étapes européennes rivalisant avec les meilleurs joueurs mondiaux de FootGolf.</li>
-            <!-- <a href="more" ><button class="btn-colored-background" type="button" name="button">Plus d'informations</button></a> -->
           </ul>
         </div>
-        <!-- <div class="col-md-6">
-
-        </div> -->
       </section>
 
       <section id="sport" class="row sport">
@@ -110,29 +106,56 @@
             <a href="https://www.footgolf-france.fr/" target="_blank"><button class="btn-white-background" type="button" name="button">Plus d'informations</button></a>
           </div>
         </div>
-
-        <!-- <figure class="col-md-6">
-          <img src="" alt="" class="img-responsive">
-
-        </figure> -->
-
-        <!-- pointer vers le site de la fédération-->
       </section>
 
       <section id="decouverte" class="decouverte row">
-
-          <div class="col-md-4">
+          <div class="col-md-offset-2 col-md-8">
             <h2>Atelier découverte</h2>
-            <p>Envie d'essayer le footgolf ? <br/>
-             Inscivez-vous à un atelier découverte en choisissant une des sessions dans le calendrier ci-dessous.</p>
-           <div class="calendarDecouverte col-md-4">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+
+           <div class="calendarDecouverte col-md-6">
              <!-- insérer calendar facilement modifiable sur lequel apparaissent toutes les sessions decouvertes (en vert) -->
+             <form class="flexCol alignCenter justifyCenter">
+               <p>Inscription :</p>
+               <div class="inputcontainer">
+                 <input type="text" class="inputText" name="prenomDecouverte" id="prenomDecouverte" required/>
+                 <label class="floating-label" for="prenomDecouverte">Prénom :</label>
+               </div>
+
+               <div class="inputcontainer">
+                 <input type="text" class="inputText" name="nomDecouverte" id="nomDecouverte" required/>
+                 <label class="floating-label" for="nomDecouverte">Nom :</label>
+               </div>
+
+               <div class="inputcontainer">
+                 <input type="mail" class="inputText" name="mailDecouverte" id="mailDecouverte" required/>
+                 <label class="floating-label" for="mailDecouverte">Mail :</label>
+               </div>
+
+               <div class="inputcontainer">
+                 <input type="text" class="inputText" name="telDecouverte" id="telDecouverte" required/>
+                 <label class="floating-label" for="telDecouverte">Téléphone :</label>
+               </div>
+
+               <div class="inputcontainer">
+                 <input type="text" class="inputText" name="refDecouverte" id="refDecouverte" required/>
+                 <label class="floating-label" for="refDecouverte">Référence de l'atelier :</label>
+               </div>
+
+               <textarea name="textareaDecouverte" placeholder="Votre message..."></textarea>
+
+               <input class="btn-colored-background" type="submit" name="" value="S'inscire">
+
+             </form>
            </div>
           </div>
 
-          <div class="col-md-4">
+          <div class="col-md-6">
             <!-- insérer formulaire avec - nom  - prénom  - tel - heure du début de la session-->
-            <form class="flexCol alignCenter justifyCenter">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.8793959013515!2d2.250854650820371!3d48.84143910975313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67ac09948a18d%3A0xdd2450406cef2c5c!2sLe+Parc+des+Princes!5e0!3m2!1sfr!2sfr!4v1495454694723" width="461" height="615" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+            <!-- <form class="flexCol alignCenter justifyCenter">
               <p>Inscription :</p>
               <div class="inputcontainer">
                 <input type="text" class="inputText" name="prenomDecouverte" id="prenomDecouverte" required/>
@@ -163,7 +186,7 @@
 
               <input class="btn-colored-background" type="submit" name="" value="S'inscire">
 
-            </form>
+            </form> -->
           </div>
       </section>
 
@@ -199,7 +222,7 @@
 
               <div class="flexCol">
                 <p>Taille de votre polo :</p>
-                <select>
+                <select name="polo">
                   <option value="xs">XS</option>
                   <option value="s">S</option>
                   <option value="m">M</option>
@@ -208,7 +231,7 @@
                 </select>
 
                 <p>Taille de votre short :</p>
-                <select>
+                <select name="short">
                   <option value="xs">XS</option>
                   <option value="s">S</option>
                   <option value="m">M</option>
@@ -217,7 +240,7 @@
                 </select>
 
                 <p>Taille de la paire de chaussette :</p>
-                <select>
+                <select name="chaussette">
                   <option value="36">36</option>
                   <option value="37">37</option>
                   <option value="38">38</option>
@@ -294,7 +317,14 @@
     </main>
 
     <footer class="container-fluid">
+
       <div id="sponsor" class="row sponsor">
+        <div class="button accessButtonContainer flexRow justifyBetween">
+          <a href="sponsoring.html"><button type="button" name="button" class="btn-white-background">Nous sponsoriser</button></a>
+        </div>
+      </div>
+
+      <!-- <div id="sponsor" class="row sponsor">
         <div class="col-md-8 col-sm-12">
           <h2>Ils ont choisi de nous sponsoriser :</h2>
           <ul class="list-inline">
@@ -307,9 +337,9 @@
         <div class="col-md-4 col-sm-12">
           <H2>Vous souhaitez nous sponsoriser ? </h2>
 
-          <a href="sponsor.html" class="text-center"><button class="btn-white-background" type="button" name="button">Plus d'informations</button></a>
+          <a href="sponsoring.html" class="text-center"><button class="btn-white-background" type="button" name="button">Plus d'informations</button></a>
         </div>
-      </div>
+      </div> -->
       <aside class="row">
         <div class="col-md-3 text-center contact">
           <ul class="list-inline">
