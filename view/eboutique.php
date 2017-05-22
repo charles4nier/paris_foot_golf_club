@@ -18,7 +18,7 @@
         <p>Paris Foot Golf Club</p>
       </div>
       <div class="col-md-4 col-md-offset-4 flexRow alignCenter justifyCenter">
-        <a href="profil.html"><button type="button" name="button">Se connecter</button></a>
+        <a href="profil.html"><button type="button" name="button" class="btn-white-background">Se connecter</button></a>
       </div>
     </div>
     <nav class="row text-center">
@@ -65,7 +65,7 @@
       <h2>Commander votre article</h2>
       <div class="enveloppe formu-achat">
         <form class="flexRow justifyAround">
-         <div class="packLoisir">
+         <div class="pack-sponsoring">
           <div class="flexCol achat">
             <div class="inputcontainer">
               <input type="text" class="inputText" name="article" id="article" required/>
