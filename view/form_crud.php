@@ -10,11 +10,4 @@
                 <input type="submit" name="submit" value="Ajouter" class="btn-colored-background">
             </form>
         </div>
-        <div class="row">
-            <form method="post" action="../controller/uploadImg.php">
-                <label for="id_image" class="floating-label">ID de l'image a supprimer</label><br>
-                <input type="text" name="id_image" id="id_image" class="inputText"><br>
-                <input id="drop_id" type="submit" name="drop_id" value="Supprimer" class="btn-colored-background">
-            </form>
-        </div>
     </section>

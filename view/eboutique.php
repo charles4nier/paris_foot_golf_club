@@ -35,6 +35,7 @@
   </header>
   <?php require 'form_crud.php'; ?>
   <main class="e-boutique container-fluid">
+      <?php require '../controller/vitrine.php'; ?>
     <section class="article col-md-6">
       <article class="col-md-6">
         <img src="http://www.footpack.fr/wp-content/uploads/2016/03/Paris-Footgolf-Club.jpg" alt="">
