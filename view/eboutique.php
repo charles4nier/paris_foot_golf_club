@@ -33,6 +33,7 @@
       </ul>
     </nav>
   </header>
+  <?php require 'form_crud.php'; ?>
   <main class="e-boutique container-fluid">
     <section class="article col-md-6">
       <article class="col-md-6">

@@ -17,7 +17,7 @@ rdv 7 juin pour version finale
           <p>Paris Foot Golf Club</p>
         </div>
         <div class="col-md-4 col-md-offset-4 flexRow alignCenter justifyCenter">
-          <a href="profil.html"><button type="button" name="button" class="btn-white-background">Se connecter</button></a>
+          <button type="button" name="button" class="btn-white-background" data-toggle="modal" data-target="#myModal">Se connecter</button>
         </div>
       </div>
       <nav class="row text-center">
@@ -37,103 +37,109 @@ rdv 7 juin pour version finale
     </div>
     <main class="container-fluid">
       <section id="club" class="row club">
-        <div class="col-md-8">
+        <div class="col-md-12">
           <h2>Paris Footgolf Club</h2>
+
           <ul>
             <li>Le Paris FootGolf Club (PFGC) est l’un des premiers clubs de FootGolf français. Il fait parti de l’élite des clubs français depuis sa création en mai 2015.</li>
             <li>3ème du championnat de France (FootGolf Cup) lors de la saison 2016, six de nos joueurs ont participé à la grande finale de la FootGolf Cup  à Marrakech !</li>
             <li>Mika Lafon, joueur emblématique du club est sélectionné pour la deuxième année consécutive en Equipe de France.</li>
             <li>Le club participe en plus à des étapes européennes rivalisant avec les meilleurs joueurs mondiaux de FootGolf.</li>
+            <!-- <a href="more" ><button class="btn-colored-background" type="button" name="button">Plus d'informations</button></a> -->
           </ul>
-          <a href="more" ><button class="btn-colored-background" type="button" name="button">Plus d'informations</button></a>
         </div>
-        <div class="col-md-4 imgClubContainer">
-          <img src="img/imgClub.png" alt="" class="img-responsive">
-        </div>
+        <!-- <div class="col-md-6">
+
+        </div> -->
       </section>
 
       <section id="sport" class="row sport">
-        <h2>Le footgolf</h2>
-        <div class="col-md-4 concept">
-          <img src="img/Soccer Ball Filled-50.png" alt="">
-          <h3>Une Balle ..</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="col-md-5 footGolfImgContainer">
+
         </div>
-        <div class="col-md-4 concept">
-          <img src="img/Soccer Filled-50.png" alt="">
-          <h3>Un tir ..</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="col-md-7">
+          <h2>Le footgolf</h2>
+          <div class="row">
+            <div class="col-md-3 concept">
+              <img src="img/Soccer Ball Filled-50.png" alt="">
+              <h3>Une Balle</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="col-md-3 concept">
+              <img src="img/Soccer Filled-50.png" alt="">
+              <h3>Un tir</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="col-md-3 concept">
+              <img src="img/Wind Speed 48-52-50.png" alt="">
+              <h3>Un trou</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="col-md-3 concept">
+              <img src="img/Wind Speed 48-52-50.png" alt="">
+              <h3>Un dress code</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <a href="https://www.footgolf-france.fr/" target="_blank"><button class="btn-white-background" type="button" name="button">Plus d'informations</button></a>
+          </div>
         </div>
-        <div class="col-md-4 concept">
-          <img src="img/Wind Speed 48-52-50.png" alt="">
-          <h3>Un trou ..</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-        <div class="col-md-4 concept">
-          <img src="img/Wind Speed 48-52-50.png" alt="">
-          <h3>Un dress code ..</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-        <a href="more" ><button class="btn-white-background" type="button" name="button">Plus d'informations</button></a>
+
+        <!-- <figure class="col-md-6">
+          <img src="" alt="" class="img-responsive">
+
+        </figure> -->
+
         <!-- pointer vers le site de la fédération-->
       </section>
 
-      <section id="decouverte" class="inscription row">
-          <h2>Atelier découverte</h2>
-          <div class="calendarDecouverte">
-            <!-- insérer calendar facilement modifiable sur lequel apparaissent toutes les sessions decouvertes (en vert) -->
-          </div>
-          <div class="">
-            <!-- insérer formulaire avec - nom  - prénom  - tel - heure du début de la session-->
-          </div>
-          <!-- <div class="col-md-6 initiation">
-            <h2>Nos différents packs d'initiation</h2>
-            <img src="img/footgolf-origin.jpg" alt="" height="300">
-          </div> -->
-          <!-- <form class="flexCol justifyCenter alignCenter" action="index.html" method="post">
-            <input type="text" name="" value="" placeholder=" nom">
-            <input type="text" name="" value="" placeholder=" prénom">
-            <input type="text" name="" value="" placeholder="Age">
-            <input type="text" name="" value="" placeholder="Adresse">
-            <input type="email" name="" value="" placeholder="Ville">
-            <textarea name="name"></textarea>
-            <input type="submit" name="" value="submit"> -->
-          <!-- </form> -->
-      </section>
       <section id="decouverte" class="decouverte row">
-          <!-- <h2>Envie de nous rejoindre ?</h2>
-          <form  action="index.html" method="post">
-            <fieldset>
-              <legend> pack</legend>
-            </fieldset>
-            <fieldset>
-              <legend> pack</legend>
-            </fieldset>
-            <fieldset class="flexCol">
-              <label for="nom"> nom : </label><br>
-              <input type="text" name="nom" value="" placeholder=" nom"><br>
-              <label for="prenom"> prénom : </label><br>
-              <input type="text" name="" value="" placeholder=" prénom"><br>
-              <label for="age"> age : </label><br>
-              <input type="text" name="age" value="" placeholder="Age"><br>
-              <label for="adresse"> adresse : </label><br>
-              <input type="text" name="adresse" value="" placeholder="Adresse"><br>
-              <label for="localite">Localité : </label><br>
-              <input type="text" name="localite" value="" placeholder="Ville"><br>
-              <label for="mail"> mail : </label><br>
-              <input type="email" name="mail" value="" placeholder="Ville"><br>
-              <label for="taille">La taille de  polo :</label><br>
-              <select name="taille" id="tailler">
-                <option value="s">S</option>
-                <option value="m">M</option>
-                <option value="l">L</option>
-                <option value="xl">XL</option>
-              </select>
-              <textarea name="name"></textarea>
-            </fieldset> -->
 
-            <input class="btn-colored-background"type="submit" name="" value="submit">
-          </form>
+          <div class="col-md-4">
+            <h2>Atelier découverte</h2>
+            <p>Envie d'essayer le footgolf ? <br/>
+             Inscivez-vous à un atelier découverte en choisissant une des sessions dans le calendrier ci-dessous.</p>
+           <div class="calendarDecouverte col-md-4">
+             <!-- insérer calendar facilement modifiable sur lequel apparaissent toutes les sessions decouvertes (en vert) -->
+           </div>
+          </div>
+
+          <div class="col-md-4">
+            <!-- insérer formulaire avec - nom  - prénom  - tel - heure du début de la session-->
+            <form class="flexCol alignCenter justifyCenter">
+              <p>Inscription :</p>
+              <div class="inputcontainer">
+                <input type="text" class="inputText" name="prenomDecouverte" id="prenomDecouverte" required/>
+                <label class="floating-label" for="prenomDecouverte">Prénom :</label>
+              </div>
+
+              <div class="inputcontainer">
+                <input type="text" class="inputText" name="nomDecouverte" id="nomDecouverte" required/>
+                <label class="floating-label" for="nomDecouverte">Nom :</label>
+              </div>
+
+              <div class="inputcontainer">
+                <input type="mail" class="inputText" name="mailDecouverte" id="mailDecouverte" required/>
+                <label class="floating-label" for="mailDecouverte">Mail :</label>
+              </div>
+
+              <div class="inputcontainer">
+                <input type="text" class="inputText" name="telDecouverte" id="telDecouverte" required/>
+                <label class="floating-label" for="telDecouverte">Téléphone :</label>
+              </div>
+
+              <div class="inputcontainer">
+                <input type="text" class="inputText" name="refDecouverte" id="refDecouverte" required/>
+                <label class="floating-label" for="refDecouverte">Référence de l'atelier :</label>
+              </div>
+
+              <textarea name="textareaDecouverte" placeholder="Votre message..."></textarea>
+
+              <input class="btn-colored-background" type="submit" name="" value="S'inscire">
+
+            </form>
+          </div>
+      </section>
+
       </section>
       <section id="boutique" class="row boutique">
 
