@@ -1,22 +1,11 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Paris Foot Golf Club</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Cabin:500" rel="stylesheet">
-  </head>
+<?php
+  require 'head.php';
+ ?>
   <body>
-
-    <!-- Modal -->
+    <!-- Modal qui ouvre la connexion au site -->
     <div id="myModal" class="firstModal modal fade" role="dialog">
       <div class="enveloppe modal-dialog">
-
         <!-- Modal content-->
-
             <form class="loginPanel" action="index.html" method="post">
               <div class="inputcontainer">
                 <input type="text" class="inputText" name="login" id="mailDecouverte" required/>
@@ -30,9 +19,145 @@
 
               <input class="btn-colored-background" type="submit" name="" value="Se connecter">
             </form>
-
       </div>
     </div>
+
+    <!-- modal qui ouvre l'inscription au club  -->
+
+    <section id="inscription" class="inscription row thirdModal modal fade" role="dialog">
+
+        <div class="enveloppe modal-dialog">
+          <form class="flexRow justifyAround">
+
+            <div class="packCompetition">
+             <p><input type="radio" name="pack" value="packCompétition">Le pack "compétition" à 100 euros comprenant : </p>
+             <ul>
+               <li>La licence AFFG</li>
+               <li>Le droit d'entrée au PFFG</li>
+               <li>Le maillot officiel du PFFG</li>
+               <li>Le bermuda de compétition</li>
+               <li>Le polo de sortie</li>
+               <li>Une paire de chaussette</li>
+               <li>Un marqueur</li>
+               <li>Un green-fee offer (hors Trophy)</li>
+             </ul>
+           </div>
+
+           <div class="packLoisir">
+            <p><input type="radio" name="pack" value="packLoisirs">Le pack "loisirs" à 60 euros, comprenant : </p>
+            <ul>
+              <li>La licence AFFG</li>
+              <li>Le droit d'entrée au PFFG</li>
+              <li>Le polo de sortie</li>
+              <li>Un green-fee offer (hors Trophy)</li>
+            </ul>
+
+            <div class="flexCol">
+              <p>Taille de votre polo :</p>
+              <select name="polo">
+                <option value="xs">XS</option>
+                <option value="s">S</option>
+                <option value="m">M</option>
+                <option value="l">L</option>
+                <option value="xl">XL</option>
+              </select>
+
+              <p>Taille de votre short :</p>
+              <select name="short">
+                <option value="xs">XS</option>
+                <option value="s">S</option>
+                <option value="m">M</option>
+                <option value="l">L</option>
+                <option value="xl">XL</option>
+              </select>
+
+              <p>Taille de la paire de chaussette :</p>
+              <select name="chaussette">
+                <option value="36">36</option>
+                <option value="37">37</option>
+                <option value="38">38</option>
+                <option value="39">39</option>
+                <option value="40">40</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+                <option value="43">43</option>
+                <option value="44">44</option>
+                <option value="45">45</option>
+                <option value="46">46</option>
+                <option value="47">47</option>
+              </select>
+            </div>
+          </div>
+
+            <div class="">
+              <div class="inputcontainer">
+                <input type="text" class="inputText" name="prenom" id="prenom" required/>
+                <label class="floating-label">Prénom :</label>
+              </div>
+
+              <div class="inputcontainer">
+                <input type="text" class="inputText" name="nom" id="nom" required/>
+                <label class="floating-label" for="nom">Nom :</label>
+              </div>
+
+              <div class="inputcontainer">
+                <input type="text" class="inputText" name="age" id="age" required/>
+                <label class="floating-label">Age :</label>
+              </div>
+
+              <div class="inputcontainer">
+                <input type="text" class="inputText" name="sexe" id="sexe" required/>
+                <label class="floating-label" for="sexe">Sexe :</label>
+              </div>
+
+              <div class="inputcontainer">
+                <input type="text" class="inputText" name="ville" id="ville" required/>
+                <label class="floating-label">Ville :</label>
+              </div>
+              
+              <p>Certificat Médical déposé :</p>
+              <label class="cm" for="cm?">Oui :</label>
+              <input  type="radio" name="cm?" value="Oui">
+              <label  class="cm" for="cm?">Non :</label>
+              <input type="radio" name="cm?" value="Non">
+            </div>
+
+            <div class="">
+
+
+              <div class="inputcontainer">
+                <input type="text" class="inputText" name="adresse" id="adresse" required/>
+                <label class="floating-label">Adresse :</label>
+              </div>
+
+              <div class="inputcontainer">
+                <input type="text" class="inputText" name="telephone" id="telephone" required/>
+                <label class="floating-label" for="telephone">Téléphone :</label>
+              </div>
+
+              <div class="inputcontainer">
+                <input type="mail" class="inputText" name="mail" id="mail" required/>
+                <label class="floating-label">Mail :</label>
+              </div>
+
+              <div class="inputcontainer">
+                <input type="mail" class="inputText" name="mail" id="password" required/>
+                <label class="floating-label">Password :</label>
+              </div>
+
+              <div class="inputcontainer">
+                <input type="mail" class="inputText" name="mail" id="passwordConfirm" required/>
+                <label class="floating-label">Confirmation :</label>
+              </div>
+
+              <input class="btn-colored-background" type="submit" name="" value="Envoyer">
+            </div>
+          </form>
+        </div>
+    </section>
+
+                          <!-- fin de la zone modal -->
+
     <header class="container-fluid">
       <div class="row">
         <div class="col-md-4 text-center logoContainer flexCol alignCenter justifyCenter">
@@ -58,7 +183,7 @@
     <div id="#accueil" class="flexCol justifyEnd alignCenter footGolfClub">
       <div class="button accessButtonContainer flexRow justifyBetween">
         <button type="button" name="button" class="btn-white-background" data-toggle="modal" data-target="#inscription">S'inscrire au club</button>
-        <a href="eboutique.php" target="_blank"><button type="button" name="button" class="btn-white-background">Aller à la boutique</button></a>
+        <a href="eboutique.php"><button type="button" name="button" class="btn-white-background">Aller à la boutique</button></a>
       </div>
 
     </div>
@@ -153,7 +278,7 @@
 
           <div class="col-md-6">
             <!-- insérer formulaire avec - nom  - prénom  - tel - heure du début de la session-->
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.8793959013515!2d2.250854650820371!3d48.84143910975313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67ac09948a18d%3A0xdd2450406cef2c5c!2sLe+Parc+des+Princes!5e0!3m2!1sfr!2sfr!4v1495454694723" width="461" height="615" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.991440613483!2d2.2922872508210306!3d48.85837360856101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sEiffel+Tower!5e0!3m2!1sen!2sfr!4v1495462291252" width="461" height="615" frameborder="0" style="border:0" allowfullscreen></iframe>
 
             <!-- <form class="flexCol alignCenter justifyCenter">
               <p>Inscription :</p>
@@ -192,135 +317,14 @@
 
       </section>
 
-      <section id="inscription" class="inscription row thirdModal modal fade" role="dialog">
 
-          <div class="enveloppe modal-dialog">
-            <form class="flexRow justifyAround">
-
-              <div class="packCompetition">
-               <p><input type="radio" name="pack" value="packCompétition">Le pack "compétition" à 100 euros comprenant : </p>
-               <ul>
-                 <li>La licence AFFG</li>
-                 <li>Le droit d'entrée au PFFG</li>
-                 <li>Le maillot officiel du PFFG</li>
-                 <li>Le bermuda de compétition</li>
-                 <li>Le polo de sortie</li>
-                 <li>Une paire de chaussette</li>
-                 <li>Un marqueur</li>
-                 <li>Un green-fee offer (hors Trophy)</li>
-               </ul>
-             </div>
-
-             <div class="packLoisir">
-              <p><input type="radio" name="pack" value="packLoisirs">Le pack "loisirs" à 60 euros, comprenant : </p>
-              <ul>
-                <li>La licence AFFG</li>
-                <li>Le droit d'entrée au PFFG</li>
-                <li>Le polo de sortie</li>
-                <li>Un green-fee offer (hors Trophy)</li>
-              </ul>
-
-              <div class="flexCol">
-                <p>Taille de votre polo :</p>
-                <select name="polo">
-                  <option value="xs">XS</option>
-                  <option value="s">S</option>
-                  <option value="m">M</option>
-                  <option value="l">L</option>
-                  <option value="xl">XL</option>
-                </select>
-
-                <p>Taille de votre short :</p>
-                <select name="short">
-                  <option value="xs">XS</option>
-                  <option value="s">S</option>
-                  <option value="m">M</option>
-                  <option value="l">L</option>
-                  <option value="xl">XL</option>
-                </select>
-
-                <p>Taille de la paire de chaussette :</p>
-                <select name="chaussette">
-                  <option value="36">36</option>
-                  <option value="37">37</option>
-                  <option value="38">38</option>
-                  <option value="39">39</option>
-                  <option value="40">40</option>
-                  <option value="41">41</option>
-                  <option value="42">42</option>
-                  <option value="43">43</option>
-                  <option value="44">44</option>
-                  <option value="45">45</option>
-                  <option value="46">46</option>
-                  <option value="47">47</option>
-                </select>
-              </div>
-
-            </div>
-
-
-
-              <div class="">
-                <div class="inputcontainer">
-                  <input type="text" class="inputText" name="prenom" id="prenom" required/>
-                  <label class="floating-label">Prénom :</label>
-                </div>
-
-                <div class="inputcontainer">
-                  <input type="text" class="inputText" name="nom" id="nom" required/>
-                  <label class="floating-label" for="nom">Nom :</label>
-                </div>
-
-                <div class="inputcontainer">
-                  <input type="text" class="inputText" name="age" id="age" required/>
-                  <label class="floating-label">Age :</label>
-                </div>
-
-                <div class="inputcontainer">
-                  <input type="text" class="inputText" name="sexe" id="sexe" required/>
-                  <label class="floating-label" for="sexe">Sexe :</label>
-                </div>
-
-                <p>Certificat Médical déposé :</p>
-                <label class="cm" for="cm?">Oui :</label>
-                <input  type="radio" name="cm?" value="Oui">
-                <label  class="cm" for="cm?">Non :</label>
-                <input type="radio" name="cm?" value="Non">
-              </div>
-
-              <div class="">
-                <div class="inputcontainer">
-                  <input type="text" class="inputText" name="ville" id="ville" required/>
-                  <label class="floating-label">Ville :</label>
-                </div>
-
-                <div class="inputcontainer">
-                  <input type="text" class="inputText" name="adresse" id="adresse" required/>
-                  <label class="floating-label">Adresse :</label>
-                </div>
-
-                <div class="inputcontainer">
-                  <input type="text" class="inputText" name="telephone" id="telephone" required/>
-                  <label class="floating-label" for="telephone">Téléphone :</label>
-                </div>
-
-                <div class="inputcontainer">
-                  <input type="mail" class="inputText" name="mail" id="mail" required/>
-                  <label class="floating-label">Mail :</label>
-                </div>
-
-                <input class="btn-colored-background" type="submit" name="" value="Envoyer">
-              </div>
-            </form>
-          </div>
-      </section>
     </main>
 
     <footer class="container-fluid">
 
       <div id="sponsor" class="row sponsor">
         <div class="button accessButtonContainer flexRow justifyBetween">
-          <a href="sponsoring.html"><button type="button" name="button" class="btn-white-background">Nous sponsoriser</button></a>
+          <a href="sponsoring.php"><button type="button" name="button" class="btn-white-background">Nous sponsoriser</button></a>
         </div>
       </div>
 
