@@ -26,23 +26,15 @@
   </header>
   <main class="sponsoring container-fluid">
     <section id="why-sponsor" class="row">
-      <h2>Pourquoi Nous sponsoriser</h2>
-      <div class="col-md-4">
-        <p>Possibilité de mise en avant permanente de votre logo sur notre bandeau de page ey dans notre video de présentation.</p>
-      </div>
-      <div class="col-md-4">
+      <div class="col-md-6">
+        <h2>Pourquoi Nous sponsoriser</h2>
+        <p>Possibilité de mise en avant permanente de votre logo sur notre bandeau de page et dans notre video de présentation.</p>
         <p>Possibilité de publi-reportages sur votre entreprise pour le lancement d'un produit ou d'un service</p>
-      </div>
-      <div class="col-md-4">
         <p>Possibilité de sponsoriser les publications sur les évenements organisés en commun pour amener du trafic vers votre page facebook ou vote site internet.</p>
       </div>
-    </section>
-    <section id="sponsor-win" class="row">
-      <h2>Nous sponsoriser c'est gagner !</h2>
       <div class="col-md-6">
+        <h2>Nous sponsoriser c'est gagner !</h2>
         <p>Les dépenses de sponsoring sont intégralement déductibles du CA net de votre entreprise. Les contreparties liées à ces investissement ne sont pas limitées en montant.</p>
-      </div>
-      <div class="col-md-6">
         <p>Les dons au titre du mécénat permettent une déduction fiscale égale à 60% des sommes versées à l'association, avec un plafond de 0,5% du CA HT.</p>
       </div>
     </section>
