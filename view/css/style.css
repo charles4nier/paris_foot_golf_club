@@ -14,6 +14,7 @@
   justify-content: center;
 }
 
+
 .justifyBetween {
   justify-content: space-between;
 }
@@ -70,6 +71,12 @@ form {
   border: 1px solid rgba(207,44,49,1);
 }
 
+.enveloppe {
+  background-color: #cf2c31;
+  margin-bottom: 50px;
+  font-size: 0.9em;
+}
+
 header, main {
   padding: 0;
 }
@@ -80,6 +87,18 @@ header div {
 
 header a button {
   color: black;
+}
+
+.firstModal .enveloppe {
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+  height: 290px;
+  padding: 30px;
+}
+
+.firstModal input[type=submit] {
+  margin-bottom: 45px;
 }
 
 nav {
@@ -115,6 +134,12 @@ nav li:last-child::after {
  }
 
  /* MAIN */
+
+.accessButtonContainer {
+
+  background: white;
+}
+
 
  main h2 {
    margin: 0 0 30px 0;
@@ -169,11 +194,12 @@ nav li:last-child::after {
 .sport {
   text-align: center;
   border-top: 1px solid white;
+  height: auto;
 }
 
 .sport .footGolfImgContainer {
   height: 100%;
-  background: url('../img/footGolf.jpg')  center no-repeat scroll;
+  background: url('../img/footGolf.jpg') center no-repeat scroll;
   background-size: cover;
   border-right: 1px solid white;
 }
@@ -200,6 +226,7 @@ nav li:last-child::after {
 .decouverte {
     background-color:#06172d;
     color: white;
+    border-top: 1px solid white;
  }
 
  .decouverte h2 {
@@ -237,10 +264,6 @@ nav li:last-child::after {
 }
 
 
-
-
-
-
 .boutique a {
  color:#509eb0;
 }
@@ -265,7 +288,7 @@ label {
 }
 
 .inscription {
- background-color:#06172d;
+ background-color: rgba(0,0,0, 0.3);
  padding: 20px 0;
  color: white;
 }
@@ -274,12 +297,9 @@ label {
   color: #ffffff;
 }
 
-.enveloppe {
-  background-color: #cf2c31;
-  margin-bottom: 50px;
-  padding: 30px;
+.inscription .enveloppe {
   width: 100%;
-  font-size: 0.9em;
+  padding: 30px;
 }
 
 .enveloppe form {
@@ -300,7 +320,7 @@ label {
   pointer-events: none;
 }
 
-input[type=text], input[type=mail] {
+input[type=text], input[type=mail], input[type=password] {
   background: transparent;
   border: none;
   border-bottom: 1px solid white ;
@@ -435,4 +455,55 @@ footer ul {
 }
 .e-boutique .formu-achat .achat .inputcontainer {
   margin-top: 20px;
+}
+.sponsoring #why-sponsor h2 {
+  color: #cf2c31;
+}
+.sponsoring #why-sponsor p {
+  text-align: center;
+  padding: 0 20px;
+}
+.sponsoring #sponsor-win h2 {
+  color: #cf2c31;
+}
+.sponsoring #sponsor-win p {
+  text-align: center;
+  padding: 0 20px;
+}
+.sponsoring #packs h2 {
+  color: white;
+}
+.sponsoring #packs p {
+  text-align: center;
+  padding: 0 20px;
+}
+.sponsoring #packs .montant {
+  color: #cf2c31;
+  font-size: 20px;
+  font-weight: 700;
+}
+.sponsoring #packs {
+  background-color: #06172d;
+  padding-bottom: 50px;
+}
+.sponsoring .pack h3 {
+  text-align: center;
+  color: #06172d;
+}
+.sponsoring .pack {
+  padding: 10px 30px;
+  border: 2px solid #cf2c31;
+  margin: 10px;
+  background-color: white;
+}
+.sponsoring .pack p:nth-child(1){
+  text-decoration: underline;
+}
+#formulaire-sponsoring {
+  margin: 50px;
+}
+#formulaire-sponsoring h2 {
+  color: #06172d;
+  padding-top: 0;
+  margin-top: 0;
 }

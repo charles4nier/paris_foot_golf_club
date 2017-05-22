@@ -20,4 +20,4 @@
 				<p class="col-xs-offset-1 col-xs-4 col-md-4" id="id_image"> Id : <?php echo $link['id']; ?></p>
 				<?php echo '<img class="card-img vitrine" src="data:'.utf8_encode($link['type']).';base64,'.base64_encode(stripslashes($link['content'])). '"/>';?>
 			</div>
-			<?php } ?> 
+			<?php } ?>

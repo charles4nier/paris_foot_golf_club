@@ -1,15 +1,38 @@
-rdv 22 mai, 17h30
-rdv 7 juin pour version finale
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <title>Paris Foot Golf Club</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Cabin:500" rel="stylesheet">
   </head>
   <body>
+
+    <!-- Modal -->
+    <div id="myModal" class="firstModal modal fade" role="dialog">
+      <div class="enveloppe modal-dialog">
+
+        <!-- Modal content-->
+
+            <form class="loginPanel" action="index.html" method="post">
+              <div class="inputcontainer">
+                <input type="text" class="inputText" name="login" id="mailDecouverte" required/>
+                <label class="floating-label" for="login">Votre login :</label>
+              </div>
+
+              <div class="inputcontainer">
+                <input type="password" class="inputText" name="password" id="mailDecouverte" required/>
+                <label class="floating-label" for="password">Votre mot de pass :</label>
+              </div>
+
+              <input class="btn-colored-background" type="submit" name="" value="Se connecter">
+            </form>
+
+      </div>
+    </div>
     <header class="container-fluid">
       <div class="row">
         <div class="col-md-4 text-center logoContainer flexCol alignCenter justifyCenter">
@@ -32,7 +55,11 @@ rdv 7 juin pour version finale
         </ul>
       </nav>
     </header>
-    <div class="footGolfClub">
+    <div class="flexCol justifyCe alignCenter footGolfClub">
+      <div class="button accessButtonContainer">
+        <button type="button" name="button" class="btn-white-background" data-toggle="modal" data-target="#inscription">S'inscrire au club</button>
+        <a href="eboutique.php" target="_blank"><button type="button" name="button" class="btn-white-background">Aller à la boutique</button></a>
+      </div>
 
     </div>
     <main class="container-fluid">
@@ -141,19 +168,10 @@ rdv 7 juin pour version finale
       </section>
 
       </section>
-      <section id="boutique" class="row boutique">
 
-        <div class="col-md-6 equipement flexCol alignCenter justifyCenter">
-          <h2>Découvrez nos équipements</h2>
-          <img src="img/maillot.png" alt="" height="300">
-          <a href="eboutique.html" ><button class="btn-white-background" type="button" name="button">Plus d'informations</button></a>
-        </div>
-      </section>
+      <section id="inscription" class="inscription row thirdModal modal fade" role="dialog">
 
-      <section id="inscription" class="inscription row">
-          <h2>Envie de nous rejoindre ?</h2>
-
-          <div class="enveloppe">
+          <div class="enveloppe modal-dialog">
             <form class="flexRow justifyAround">
 
               <div class="packCompetition">
