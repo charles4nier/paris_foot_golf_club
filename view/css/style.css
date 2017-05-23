@@ -326,7 +326,7 @@ label {
   pointer-events: none;
 }
 
-input[type=text], input[type=mail], input[type=password] {
+input[type=text], input[type=mail], input[type=password], input[type=number], input[type=tel] {
   background: transparent;
   border: none;
   border-bottom: 1px solid white ;
