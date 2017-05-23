@@ -2,13 +2,13 @@
 
 require '../modele/db_access.php';
 
-$name = $_POST['login'];
+$mail = $_POST['mail'];
 $pass_hache = sha1($_POST['password']);
 
-$req = $bdd->prepare('SELECT * FROM users WHERE name = :name AND pass = :pass');
+$req = $bdd->prepare('SELECT * FROM users WHERE mail = :mail AND pass = :pass');
 
 $req->execute(array(
-    'name' => $name,
+    'mail' => $mail,
     'pass' => $pass_hache));
 
 
@@ -17,13 +17,14 @@ $resultat = $req->fetch();
 
 if (!$resultat)
 {
-    // header("Location: http://localhost/footgolf/paris_foot_golf_club/view/maquette.html");
+    header("Location: http://localhost/footgolf/paris_foot_golf_club/view/maquette.php");
     echo "Connexion refusée";
 }
 elseif (!isset($_SESSION['username'])) {
     $_SESSION['username'] = $resultat['name']; 
     echo 'Vous êtes connecté ! <br>';
     echo 'Bonjour ' . $_SESSION['username'];
+    header("Location: http://localhost/footgolf/paris_foot_golf_club/view/eboutique.php");
 
     
 }
