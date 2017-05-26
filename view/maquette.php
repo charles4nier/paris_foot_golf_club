@@ -9,12 +9,12 @@
         <!-- Modal content-->
             <form class="loginPanel" action="../controller/signin.php" method="post">
               <div class="inputcontainer">
-                <input type="text" class="inputText" name="login" id="mailDecouverte" required/>
-                <label class="floating-label" for="login">Votre login :</label>
+                <input type="text" class="inputText" name="mail" id="login_mail" required/>
+                <label class="floating-label" for="mail">Votre Email :</label>
               </div>
 
               <div class="inputcontainer">
-                <input type="password" class="inputText" name="password" id="mailDecouverte" required/>
+                <input type="password" class="inputText" name="password" id="login_password" required/>
                 <label class="floating-label" for="password">Votre mot de pass :</label>
               </div>
 

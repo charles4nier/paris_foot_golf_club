@@ -24,9 +24,12 @@
       </ul>
     </nav>
   </header>
-  <?php require 'form_crud.php'; ?>
   <main class="e-boutique container-fluid">
-    <button type="button" name="button" class="btn-white-background" data-toggle="modal" data-target="#add-article">+</button>
+
+    <?php if(isset($_SESSION['admin'])) { ?>
+      <button type="button" name="button" class="btn-white-background" data-toggle="modal" data-target="#add-article">+</button>
+    <?php } ?>
+
 
     <section class="article col-md-6">
       <article class="col-md-6">
