@@ -1,6 +1,7 @@
 <?php
   require 'head.php';
  ?>
+ le mercredi 7 juin
   <body>
     <!-- Modal qui ouvre la connexion au site -->
     <div id="myModal" class="firstModal modal fade" role="dialog">
@@ -114,7 +115,7 @@
                 <input type="text" class="inputText" name="ville" id="ville" required/>
                 <label class="floating-label">Ville :</label>
               </div>
-              
+
               <p>Certificat Médical déposé :</p>
               <label class="cm" for="cm?">Oui :</label>
               <input  type="radio" name="cm?" value="Oui">
@@ -175,7 +176,8 @@
           <li><a href="#decouverte">Atelier découverte</a></li>
           <!-- <li><a href="#inscription">Rejoindre le club</a></li> -->
           <!-- <li><a href="#boutique">La boutique</a></li>
-          <li><a href="#sponsor">Sponsoring</a></li> -->
+          <!-- <li><a href="#sponsor">Sponsoring</a></li> -->
+          <li><a href="#sponsor">Sponsoring </a>
           <li><a href="#contact">Nous contacter</a></li>
         </ul>
       </nav>
@@ -278,7 +280,7 @@
 
           <div class="col-md-6">
             <!-- insérer formulaire avec - nom  - prénom  - tel - heure du début de la session-->
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.991440613483!2d2.2922872508210306!3d48.85837360856101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sEiffel+Tower!5e0!3m2!1sen!2sfr!4v1495462291252" width="461" height="615" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.8793959013387!2d2.2508546508203797!3d48.841439109753125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67ac09948a18d%3A0xdd2450406cef2c5c!2sLe+Parc+des+Princes!5e0!3m2!1sen!2sfr!4v1495469069744" width="461" height="615" frameborder="0" style="border:0" allowfullscreen></iframe>
 
             <!-- <form class="flexCol alignCenter justifyCenter">
               <p>Inscription :</p>

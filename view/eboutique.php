@@ -26,11 +26,8 @@
   </header>
   <?php require 'form_crud.php'; ?>
   <main class="e-boutique container-fluid">
-<<<<<<< HEAD
-      <?php require '../controller/vitrine.php'; ?>
-=======
     <button type="button" name="button" class="btn-white-background" data-toggle="modal" data-target="#add-article">+</button>
->>>>>>> 03d875f99ee29febab9105357ce7c6ce2dd3ed69
+
     <section class="article col-md-6">
       <article class="col-md-6">
         <img src="http://www.footpack.fr/wp-content/uploads/2016/03/Paris-Footgolf-Club.jpg" alt="">
