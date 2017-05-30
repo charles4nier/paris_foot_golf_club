@@ -40,6 +40,19 @@ a:hover {
   text-decoration: none;
 }
 
+a:focus {
+  text-decoration: none;
+}
+
+a:link {
+  outline: none;
+}
+
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
 form {
   background-color: #cf2c31;
 }
@@ -82,6 +95,17 @@ form {
 
 header, main {
   padding: 0;
+}
+
+header {
+  top :0;
+  left: 0;
+  height: 120px;
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  z-index: 200;
+  box-shadow: 4px 4px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 header div {
@@ -130,7 +154,8 @@ nav li:last-child::after {
 }
 
 .footGolfClub {
-  height: 100vh;
+  margin-top: 160px;
+  height: calc(100vh - 160px);
   background: url(../img/groupe.jpg) no-repeat center;
   background-size: cover;
   background-attachment: scroll;
@@ -140,7 +165,7 @@ nav li:last-child::after {
 
 .accessButtonContainer {
   margin-bottom: 45px;
-  width: 400px;
+  width: 600px;
 }
 
 .accessButtonContainer .btn-white-background:hover, .sponsor  .btn-white-background:hover{
@@ -199,12 +224,10 @@ nav li:last-child::after {
 
 /*                     Le sport                   */
 
-.sport {
-  text-align: center;
-}
+
 
 .footGolfImgContainer {
-  height: 650px;
+  height: 850px;
   background: url('../img/footGolf.jpg') center no-repeat scroll;
   background-size: cover;
   border-top: 1px solid white;
@@ -214,9 +237,24 @@ nav li:last-child::after {
   padding-top: 35px;
 }
 
+.sport .concept {
+  height: 200px;
+  margin-bottom: 35px;
+}
+
 .sport h2 {
   color: #323232;
   margin-bottom: 50px;
+}
+
+.sport p {
+  width: 80%;
+  margin: 0 auto 25px auto;
+  font-style: oblique;
+}
+
+.sport h3 img {
+  margin-right: 15px;
 }
 
 .sport button {
@@ -224,7 +262,9 @@ nav li:last-child::after {
 }
 
 .sport a {
- color: #06172d;
+  display: inline-block;
+  color: #06172d;
+  margin-left: 50%;
 }
 
 /*                découverte              */
@@ -234,6 +274,8 @@ nav li:last-child::after {
     color: white;
     border-top: 1px solid white;
  }
+
+
 
  .decouverte h2 {
    margin-top: 25px;

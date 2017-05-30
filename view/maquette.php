@@ -1,7 +1,6 @@
 <?php
   require 'head.php';
  ?>
- le mercredi 7 juin
   <body>
     <!-- Modal qui ouvre la connexion au site -->
     <div id="myModal" class="firstModal modal fade" role="dialog">
@@ -171,20 +170,17 @@
       </div>
       <nav class="row text-center">
         <ul class="flexRow alignCenter justifyCenter">
-          <li><a href="#accueil">Accueil</a></li>
-          <li><a href="#sport">Le sport</a></li>
-          <li><a href="#decouverte">Atelier découverte</a></li>
-          <!-- <li><a href="#inscription">Rejoindre le club</a></li> -->
-          <!-- <li><a href="#boutique">La boutique</a></li>
-          <!-- <li><a href="#sponsor">Sponsoring</a></li> -->
-          <li><a href="#sponsor">Sponsoring </a>
-          <li><a href="#contact">Nous contacter</a></li>
+          <li><a href="#accueil" class="scrollButton">Accueil</a></li>
+          <li><a href="#sport"  class="scrollButton">Le sport</a></li>
+          <li><a href="#sponsor" class="scrollButton">Sponsoring </a>
+          <li><a href="#contact" class="scrollButton">Nous contacter</a></li>
         </ul>
       </nav>
     </header>
-    <div id="#accueil" class="flexCol justifyEnd alignCenter footGolfClub">
+    <div id="accueil" class="flexCol justifyEnd alignCenter footGolfClub">
       <div class="button accessButtonContainer flexRow justifyBetween">
         <button type="button" name="button" class="btn-white-background" data-toggle="modal" data-target="#inscription">S'inscrire au club</button>
+        <a href="#decouverte" class="scrollButton"><button type="button" name="button" class="btn-white-background">Découvrir les ateliers</button></a>
         <a href="eboutique.php"><button type="button" name="button" class="btn-white-background">Aller à la boutique</button></a>
       </div>
 
@@ -210,26 +206,28 @@
         <div class="col-md-7">
           <h2>Le footgolf</h2>
           <div class="row">
-            <div class="col-md-3 concept">
-              <img src="img/Soccer Ball Filled-50.png" alt="">
-              <h3>Une Balle</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>Jouer au football avec élégance, sur un terrain de golf, selon les règles du golf, tel pourrait être la définition du Footgolf.</p>
+            <div class="col-md-offset-1 col-md-5 concept">
+
+              <h3><img src="img/Wind Speed 48-52-50.png" alt="">Un dress code</h3>
+              <p>Le Footgolf, c'est une véritable identité vestimentaire : Polo, bermudas, chaussettes à losange montantes et bérets sont alors de sortie sur le green.</p>
             </div>
-            <div class="col-md-3 concept">
-              <img src="img/Soccer Filled-50.png" alt="">
-              <h3>Un tir</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="col-md-5 concept">
+
+              <h3><img src="img/Soccer Ball Filled-50.png" alt="">Un ballon</h3>
+              <p>Taille 5 uniquement, vous serez vite pris par le virus des ballons officiels de matchs.</p>
             </div>
-            <div class="col-md-3 concept">
-              <img src="img/Wind Speed 48-52-50.png" alt="">
-              <h3>Un trou</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="col-md-offset-1 col-md-5 concept">
+
+              <h3><img src="img/Soccer Filled-50.png" alt="">Une frappe</h3>
+              <p> Tout en technique : drive, approche, putt... à moins d'être golfeur ces termes ne vous disent pas grand chose mais ils vont vite rentrer dans votre langage.</p>
             </div>
-            <div class="col-md-3 concept">
-              <img src="img/Wind Speed 48-52-50.png" alt="">
-              <h3>Un dress code</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="col-md-5 concept">
+
+              <h3><img src="img/Wind Speed 48-52-50.png" alt="">Un trou</h3>
+              <p>Certes plus grand que celui des golfeurs, mais c'est pas pour autant que c'est plus simple !</p>
             </div>
+
             <a href="https://www.footgolf-france.fr/" target="_blank"><button class="btn-white-background" type="button" name="button">Plus d'informations</button></a>
           </div>
         </div>
@@ -238,7 +236,7 @@
       <section id="decouverte" class="decouverte row">
           <div class="col-md-offset-2 col-md-8">
             <h2>Atelier découverte</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Vous voulez découvrir ou simplement jouer au footgolf ? Rien de plus simple, identifier la date et le golf qui vous convient et inscrivez vous. Ce sera l'occasion de partager un bon moment de convivialité et de sportivité avec les joueurs du Paris Footgolf Club.</p>
           </div>
 
            <div class="calendarDecouverte col-md-6">
@@ -385,5 +383,7 @@
         </div>
       </aside>
     </footer>
+    <script type="text/javascript" src="js/ease.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
   </body>
 </html>
