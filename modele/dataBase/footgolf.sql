@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  localhost:3306
--- Généré le :  Mar 23 Mai 2017 à 14:02
+-- Généré le :  Mar 30 Mai 2017 à 10:46
 -- Version du serveur :  5.7.18-0ubuntu0.17.04.1
 -- Version de PHP :  7.0.18-0ubuntu0.17.04.1
 
@@ -68,6 +68,13 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+-- Contenu de la table `users`
+--
+
+INSERT INTO `users` (`id`, `firstname`, `lastname`, `pack`, `mail`, `pass`, `age`, `sexe`, `cm`, `ville`, `adresse`, `phone`, `admin`) VALUES
+(1, 'admin', 'BucKz', 'packLoisirs', 'lefevre.maxime96@gmail.com', '0706025b2bbcec1ed8d64822f4eccd96314938d0', 20, 'Alien', 'Non', 'Paris', '11, rue du clos', 768313937, 0);
+
+--
 -- Index pour les tables exportées
 --
 
@@ -96,7 +103,7 @@ ALTER TABLE `upload`
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
