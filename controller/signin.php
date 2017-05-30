@@ -23,6 +23,7 @@ if (!$resultat)
     echo "Connexion refusée";
 }
 elseif (!isset($_SESSION['username'])) {
+    session_start();
     $_SESSION['username'] = $resultat['name'];
     echo 'Vous êtes connecté ! <br>';
     echo 'Bonjour ' . $_SESSION['username'];
