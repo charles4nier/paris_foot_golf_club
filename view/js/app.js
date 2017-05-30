@@ -9,5 +9,14 @@ $(function () {
       },
       750
     );
+    //
+    // $("header nav").animate(
+    //   {
+    //     opacity: 0,
+    //     height: 0
+    //   },
+    //   250
+    // );
+
   });
 });
