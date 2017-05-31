@@ -277,41 +277,8 @@
           </div>
 
           <div class="col-md-6">
-            <!-- insérer formulaire avec - nom  - prénom  - tel - heure du début de la session-->
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.8793959013387!2d2.2508546508203797!3d48.841439109753125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67ac09948a18d%3A0xdd2450406cef2c5c!2sLe+Parc+des+Princes!5e0!3m2!1sen!2sfr!4v1495469069744" width="461" height="615" frameborder="0" style="border:0" allowfullscreen></iframe>
 
-            <!-- <form class="flexCol alignCenter justifyCenter">
-              <p>Inscription :</p>
-              <div class="inputcontainer">
-                <input type="text" class="inputText" name="prenomDecouverte" id="prenomDecouverte" required/>
-                <label class="floating-label" for="prenomDecouverte">Prénom :</label>
-              </div>
-
-              <div class="inputcontainer">
-                <input type="text" class="inputText" name="nomDecouverte" id="nomDecouverte" required/>
-                <label class="floating-label" for="nomDecouverte">Nom :</label>
-              </div>
-
-              <div class="inputcontainer">
-                <input type="mail" class="inputText" name="mailDecouverte" id="mailDecouverte" required/>
-                <label class="floating-label" for="mailDecouverte">Mail :</label>
-              </div>
-
-              <div class="inputcontainer">
-                <input type="text" class="inputText" name="telDecouverte" id="telDecouverte" required/>
-                <label class="floating-label" for="telDecouverte">Téléphone :</label>
-              </div>
-
-              <div class="inputcontainer">
-                <input type="text" class="inputText" name="refDecouverte" id="refDecouverte" required/>
-                <label class="floating-label" for="refDecouverte">Référence de l'atelier :</label>
-              </div>
-
-              <textarea name="textareaDecouverte" placeholder="Votre message..."></textarea>
-
-              <input class="btn-colored-background" type="submit" name="" value="S'inscire">
-
-            </form> -->
           </div>
       </section>
 
@@ -328,22 +295,6 @@
         </div>
       </div>
 
-      <!-- <div id="sponsor" class="row sponsor">
-        <div class="col-md-8 col-sm-12">
-          <h2>Ils ont choisi de nous sponsoriser :</h2>
-          <ul class="list-inline">
-            <li><img src="img/logo_kappa.jpg" alt="" height="70"></li>
-            <li><img src="img/logo_nike.png" alt="" height="70"></li>
-            <li><img src="img/logo_parisien.png" alt="" height="70"></li>
-            <li><img src="img/logo_pariscola.png" alt="" height="70"></li>
-          </ul>
-        </div>
-        <div class="col-md-4 col-sm-12">
-          <H2>Vous souhaitez nous sponsoriser ? </h2>
-
-          <a href="sponsoring.html" class="text-center"><button class="btn-white-background" type="button" name="button">Plus d'informations</button></a>
-        </div>
-      </div> -->
       <aside class="row">
         <div class="col-md-3 text-center contact">
           <ul class="list-inline">
