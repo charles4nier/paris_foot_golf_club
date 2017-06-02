@@ -23,8 +23,8 @@
         <li><a href="#contact">Nous contacter</a></li>
       </ul>
     </nav>
-  </header>
-  <main class="e-boutique container-fluid">
+  </header
+>  <main class="e-boutique container-fluid">
 
     <?php if(isset($_SESSION['admin'])) { ?>
       <button type="button" name="button" class="btn-white-background" data-toggle="modal" data-target="#add-article">+</button>
@@ -32,6 +32,23 @@
 
 
     <section class="article col-md-6">
+  <?php require '../modele/db_access.php';
+
+  $links = $bdd->query('SELECT * FROM upload');
+  ?>
+
+
+  <section class="container">
+    <div class="row">
+      <?php foreach ($links as $link) { ?>
+      <div class="card col-xs-4 col-md-4">
+        <p class="col-xs-offset-1 col-xs-4 col-md-4" id="id_image"> Id : <?php echo $link['id']; ?></p>
+        <?php echo '<img class="card-img vitrine" src="data:'.utf8_encode($link['type']).';base64,'.base64_encode(stripslashes($link['content'])). '"/>';?>
+      </div>
+      <?php } ?> 
+
+
+
       <article class="col-md-6">
         <img src="http://www.footpack.fr/wp-content/uploads/2016/03/Paris-Footgolf-Club.jpg" alt="">
         <p>Référence article : 34</p>
