@@ -14,13 +14,8 @@
     </div>
     <nav class="row text-center">
       <ul class="flexRow alignCenter justifyCenter">
-        <li><a href="#club">Le club</a></li>
-        <li><a href="#sport">Le sport</a></li>
-        <li><a href="#decouverte">Atelier découverte</a></li>
-        <li><a href="#inscription">Rejoindre le club</a></li>
-        <li><a href="#boutique">La boutique</a></li>
-        <li><a href="#sponsor">Sponsoring</a></li>
-        <li><a href="#contact">Nous contacter</a></li>
+        <li><a href="maquette.php" class="scrollButton">Accueil</a></li>
+        <li><a href="eboutique.php" class="scrollButton">Boutique</a></li>
       </ul>
     </nav>
   </header>

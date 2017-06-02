@@ -35,6 +35,25 @@ a {
   color: #ffffff;
 }
 
+header .scrollButton {
+  position: relative;
+}
+
+header .scrollButton::before {
+  position: absolute;
+  bottom: -2px;
+  content: '';
+  height: 1px;
+  width: 100%;
+  background-color: white;
+  transition: all 0.2s ease-in-out;
+  transform: scaleX(0);
+}
+
+header .scrollButton:hover::before {
+  transform: scaleX(1);
+}
+
 a:hover {
   color: #ffffff;
   text-decoration: none;
@@ -82,7 +101,7 @@ form {
 }
 
 .btn-white-background:hover {
-  background: rgba(207,44,49,0);
+  background: white;
   color: black;
   border: 1px solid rgba(207,44,49,1);
 }
@@ -98,9 +117,8 @@ header, main {
 }
 
 header {
-  top :0;
+  top: 0;
   left: 0;
-  height: 120px;
   position: fixed;
   width: 100%;
   background-color: white;
@@ -109,7 +127,7 @@ header {
 }
 
 header div {
-  height: 100px;
+  height: 90px;
 }
 
 header a button {
@@ -131,6 +149,7 @@ header a button {
 nav {
   background-color: #06172d;
   padding: 15px 0;
+  border-bottom: 1px solid white;
 }
 
 nav li {
@@ -168,12 +187,6 @@ nav li:last-child::after {
   width: 600px;
 }
 
-.accessButtonContainer .btn-white-background:hover, .sponsor  .btn-white-background:hover{
-  background-color: white !important;
-  color: black !important;
-  border: 1px solid rgba(255,255,255,1);
-}
-
  main h2 {
    margin: 0 0 30px 0;
    text-align: center;
@@ -182,7 +195,6 @@ nav li:last-child::after {
  main button {
    margin-top: 30px;
  }
-
 
 /*                     Le club                       */
 
@@ -262,9 +274,11 @@ nav li:last-child::after {
 }
 
 .sport a {
-  display: inline-block;
+  display: block;
   color: #06172d;
-  margin-left: 50%;
+  width: 166px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*                découverte              */
@@ -446,25 +460,6 @@ footer {
   display: inline-block;
   margin-left: 55%;
 }
-/*.sponsor div:first-child::after {
-  content: "";
-  position: absolute;
-  top: 25px;
-  right: 55px;
-  width: 2px;
-  height: 200px;
-  border-left: 2px dashed #cf2c31;
-}
-
-.sponsor li {
-  margin: 55px 20px;
-}
-
-.sponsor a {
-  display: inline-block;
-  margin-top: 35px;
-  margin-left: 100px;
-}*/
 
 .contact {
   padding: 20px 80px;
@@ -486,6 +481,10 @@ footer ul {
 }
 
 /* E-boutique */
+
+.e-boutique {
+  margin-top: 180px;
+}
 
 .e-boutique img {
   width: 200px;
@@ -517,6 +516,7 @@ footer ul {
 }
 
 .sponsoring #why-sponsor{
+  margin-top: 160px;
   padding: 40px 20px;
 }
 

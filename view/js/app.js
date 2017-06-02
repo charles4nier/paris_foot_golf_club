@@ -5,7 +5,7 @@ $(function () {
     e.preventDefault();
     $("html, body").animate(
       {
-        scrollTop: $(this.hash).offset().top - 160
+        scrollTop: $(this.hash).offset().top - 150
       },
       750
     );
