@@ -4,23 +4,17 @@ session_start();
 $prenom = $_POST['prenom'];
 $nom = $_POST['nom'];
 $phone = $_POST['telephone'];
-$mail_sender = 'lefevre.maxime96@gmail.com';
 $mail_delivery = $_POST['mail'];
 $ville = $_POST['ville'];
 $adresse = $_POST['adresse'];
 $article = $_POST['article'];
 $quantité = $_POST['quantité'];
 $taille = $_POST['taille'];
-
-var_dump($prenom);
-var_dump($nom);
-var_dump($_POST);
-
+$mail_sender = 'victor.m.valente@gmail.com';
 if (isset($_POST['submit'])) {
 
-
 $mail = 'weaponsb@mail.fr'; // Déclaration de l'adresse de destination.
-if (!preg_match("#^[a-z0-9._-]+@(hotmail|live|msn).[a-z]{2,4}$#", $mail_delivery)) // On filtre les serveurs qui rencontrent des bogues.
+if (!preg_match("#^[a-z0-9._-]+@(hotmail|live|msn).[a-z]{2,4}$#", $mail_sender)) // On filtre les serveurs qui rencontrent des bogues.
 {
 	$passage_ligne = "\r\n";
 }
@@ -57,8 +51,8 @@ $sujet = "Achat Boutique";
 //=========
  
 //=====Création du header de l'e-mail.
-$header = "From: \"Max\"<lefevre.maxime96@gmail.com>".$passage_ligne;
-$header.= "Reply-to: \"Max\" <lefevre.maxime96@gmail.com>".$passage_ligne;
+$header = "From: \"Victor\"< " .$mail_sender. " >".$passage_ligne;
+$header.= "Reply-to: \"Victor\" < " .$mail_sender. " >".$passage_ligne;
 $header.= "MIME-Version: 1.0".$passage_ligne;
 $header.= "Content-Type: multipart/alternative;".$passage_ligne." boundary=\"$boundary\"".$passage_ligne;
 //==========
