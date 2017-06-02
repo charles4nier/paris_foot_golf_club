@@ -1,5 +1,5 @@
 <?php
-  require 'head.php';
+require 'head.php';
  ?>
   <body>
     <!-- Modal qui ouvre la connexion au site -->
@@ -236,50 +236,134 @@
       <section id="decouverte" class="decouverte row">
           <div class="col-md-offset-2 col-md-8">
             <h2>Atelier découverte</h2>
-            <p>Vous voulez découvrir ou simplement jouer au footgolf ? Rien de plus simple, identifier la date et le golf qui vous convient et inscrivez vous. Ce sera l'occasion de partager un bon moment de convivialité et de sportivité avec les joueurs du Paris Footgolf Club.</p>
+            <p class="intro-decouverte">Vous voulez découvrir ou simplement jouer au footgolf ? Rien de plus simple, identifier la date et le golf qui vous convient et inscrivez vous. Ce sera l'occasion de partager un bon moment de convivialité et de sportivité avec les joueurs du Paris Footgolf Club.</p>
           </div>
 
-           <div class="calendarDecouverte col-md-6">
-             <!-- insérer calendar facilement modifiable sur lequel apparaissent toutes les sessions decouvertes (en vert) -->
-             <form class="flexCol alignCenter justifyCenter">
-               <p>Inscription :</p>
-               <div class="inputcontainer">
-                 <input type="text" class="inputText" name="prenomDecouverte" id="prenomDecouverte" required/>
-                 <label class="floating-label" for="prenomDecouverte">Prénom :</label>
-               </div>
 
-               <div class="inputcontainer">
-                 <input type="text" class="inputText" name="nomDecouverte" id="nomDecouverte" required/>
-                 <label class="floating-label" for="nomDecouverte">Nom :</label>
-               </div>
 
-               <div class="inputcontainer">
-                 <input type="mail" class="inputText" name="mailDecouverte" id="mailDecouverte" required/>
-                 <label class="floating-label" for="mailDecouverte">Mail :</label>
-               </div>
+                 <div class="col-md-6 text-center">
+                     <div id="calendar" class="col-centered">
+                     </div>
+                 </div>
 
-               <div class="inputcontainer">
-                 <input type="text" class="inputText" name="telDecouverte" id="telDecouverte" required/>
-                 <label class="floating-label" for="telDecouverte">Téléphone :</label>
-               </div>
+                 <div class="col-md-6">
+                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.8793959013387!2d2.2508546508203797!3d48.841439109753125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67ac09948a18d%3A0xdd2450406cef2c5c!2sLe+Parc+des+Princes!5e0!3m2!1sen!2sfr!4v1495469069744" frameborder="0" style="border:0" allowfullscreen></iframe>
 
-               <div class="inputcontainer">
-                 <input type="text" class="inputText" name="refDecouverte" id="refDecouverte" required/>
-                 <label class="floating-label" for="refDecouverte">Référence de l'atelier :</label>
-               </div>
+                 </div>
+             </div>
+             <!-- /.row -->
 
-               <textarea name="textareaDecouverte" placeholder="Votre message..."></textarea>
+     		<!-- Modal -->
+     		<div class="modal fade" id="ModalAdd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+     		  <div class="modal-dialog" role="document">
+     			<div class="modal-content">
+     			<form class="form-horizontal" method="POST" action="addEvent.php">
 
-               <input class="btn-colored-background" type="submit" name="" value="S'inscire">
+     			  <div class="modal-header">
+     				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+     				<h4 class="modal-title" id="myModalLabel">Add Event</h4>
+     			  </div>
+     			  <div class="modal-body">
 
-             </form>
-           </div>
-          </div>
+     				  <div class="form-group">
+     					<label for="title" class="col-sm-2 control-label">Title</label>
+     					<div class="col-sm-10">
+     					  <input type="text" name="title" class="form-control" id="title" placeholder="Title">
+     					</div>
+     				  </div>
+     				  <div class="form-group">
+     					<label for="color" class="col-sm-2 control-label">Color</label>
+     					<div class="col-sm-10">
+     					  <select name="color" class="form-control" id="color">
+     						  <option value="">Choose</option>
+     						  <option style="color:#0071c5;" value="#0071c5">&#9724; Dark blue</option>
+     						  <option style="color:#40E0D0;" value="#40E0D0">&#9724; Turquoise</option>
+     						  <option style="color:#008000;" value="#008000">&#9724; Green</option>
+     						  <option style="color:#FFD700;" value="#FFD700">&#9724; Yellow</option>
+     						  <option style="color:#FF8C00;" value="#FF8C00">&#9724; Orange</option>
+     						  <option style="color:#FF0000;" value="#FF0000">&#9724; Red</option>
+     						  <option style="color:#000;" value="#000">&#9724; Black</option>
 
-          <div class="col-md-6">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.8793959013387!2d2.2508546508203797!3d48.841439109753125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67ac09948a18d%3A0xdd2450406cef2c5c!2sLe+Parc+des+Princes!5e0!3m2!1sen!2sfr!4v1495469069744" width="461" height="615" frameborder="0" style="border:0" allowfullscreen></iframe>
+     						</select>
+     					</div>
+     				  </div>
+     				  <div class="form-group">
+     					<label for="start" class="col-sm-2 control-label">Start date</label>
+     					<div class="col-sm-10">
+     					  <input type="text" name="start" class="form-control" id="start" readonly>
+     					</div>
+     				  </div>
+     				  <div class="form-group">
+     					<label for="end" class="col-sm-2 control-label">End date</label>
+     					<div class="col-sm-10">
+     					  <input type="text" name="end" class="form-control" id="end" readonly>
+     					</div>
+     				  </div>
 
-          </div>
+     			  </div>
+     			  <div class="modal-footer">
+     				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+     				<button type="submit" class="btn btn-primary">Save changes</button>
+     			  </div>
+     			</form>
+     			</div>
+     		  </div>
+     		</div>
+
+
+
+     		<!-- Modal -->
+     		<div class="modal fade" id="ModalEdit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+     		  <div class="modal-dialog" role="document">
+     			<div class="modal-content">
+     			<form class="form-horizontal" method="POST" action="editEventTitle.php">
+     			  <div class="modal-header">
+     				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+     				<h4 class="modal-title" id="myModalLabel">Edit Event</h4>
+     			  </div>
+     			  <div class="modal-body">
+
+     				  <div class="form-group">
+     					<label for="title" class="col-sm-2 control-label">Title</label>
+     					<div class="col-sm-10">
+     					  <input type="text" name="title" class="form-control" id="title" placeholder="Title">
+     					</div>
+     				  </div>
+     				  <div class="form-group">
+     					<label for="color" class="col-sm-2 control-label">Color</label>
+     					<div class="col-sm-10">
+     					  <select name="color" class="form-control" id="color">
+     						  <option value="">Choose</option>
+     						  <option style="color:#0071c5;" value="#0071c5">&#9724; Dark blue</option>
+     						  <option style="color:#40E0D0;" value="#40E0D0">&#9724; Turquoise</option>
+     						  <option style="color:#008000;" value="#008000">&#9724; Green</option>
+     						  <option style="color:#FFD700;" value="#FFD700">&#9724; Yellow</option>
+     						  <option style="color:#FF8C00;" value="#FF8C00">&#9724; Orange</option>
+     						  <option style="color:#FF0000;" value="#FF0000">&#9724; Red</option>
+     						  <option style="color:#000;" value="#000">&#9724; Black</option>
+
+     						</select>
+     					</div>
+     				  </div>
+     				    <div class="form-group">
+     						<div class="col-sm-offset-2 col-sm-10">
+     						  <div class="checkbox">
+     							<label class="text-danger"><input type="checkbox"  name="delete"> Delete event</label>
+     						  </div>
+     						</div>
+     					</div>
+
+     				  <input type="hidden" name="id" class="form-control" id="id">
+
+
+     			  </div>
+     			  <div class="modal-footer">
+     				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+     				<button type="submit" class="btn btn-primary">Save changes</button>
+     			  </div>
+     			</form>
+     			</div>
+     		  </div>
       </section>
 
       </section>
@@ -334,7 +418,36 @@
         </div>
       </aside>
     </footer>
+    <script type="text/javascript" src="js/moment.min.js"></script>
     <script type="text/javascript" src="js/ease.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
+    <script src='js/fullcalendar.js'></script>
+    <script src='js/fr.js'></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+
+  // page is now ready, initialize the calendar...
+
+        $('#calendar').fullCalendar({
+
+          header: {
+           left: 'prev',
+           center: 'title',
+           right: 'today, next'
+          },
+
+          /*editable: true,
+          droppable: true,*/
+
+          dayClick: function(date, jsEvent, view) {
+            $.get( "../app/calendar.php")
+              .done(function( data ) {
+                alert(data.response);// change the day's background color just for fun
+              });
+         }
+        });
+
+    });
+    </script>
   </body>
 </html>
