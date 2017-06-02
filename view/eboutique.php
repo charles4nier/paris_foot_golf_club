@@ -34,12 +34,9 @@
       foreach ($links as $link) { ?>
       <article class="col-md-6">
         <?php echo '<img src="data:'.utf8_encode($link['type']).';base64,'.base64_encode(stripslashes($link['content'])). '"/>';?>
-        <p class="col-xs-offset-1 col-xs-4 col-md-4" id="id_image"> Id : <?php echo $link['id']; ?></p>
+        <p class="col-xs-offset-1 col-xs-4 col-md-4" id="id_image"> Référence article : <?php echo $link['id']; ?></p>
       </article>
       <?php } ?> 
-
-
-
 
       <article class="col-md-6">
         <img src="http://www.footpack.fr/wp-content/uploads/2016/03/Paris-Footgolf-Club.jpg" alt="">
@@ -57,7 +54,7 @@
     <section class="formulaire-achat col-md-6">
       <h2>Commander votre article</h2>
       <div class="enveloppe formu-achat">
-        <form class="flexRow justifyAround">
+        <form class="flexRow justifyAround" method="post" action="../controller/mail.php">
          <div class="pack-sponsoring">
           <div class="flexCol achat">
             <div class="inputcontainer">
@@ -66,7 +63,7 @@
             </div>
 
             <p>Taille article</p>
-            <select>
+            <select name="taille">
               <option value="xs">XS</option>
               <option value="s">S</option>
               <option value="m">M</option>
@@ -114,15 +111,16 @@
               <label class="floating-label">Adresse :</label>
             </div>
 
-
-
             <div class="inputcontainer">
               <input type="mail" class="inputText" name="mail" id="mail" required/>
               <label class="floating-label">Mail :</label>
             </div>
 
-            <input class="btn-colored-background"type="submit" name="" value="Envoyer">
+            <input class="btn-colored-background" type="submit" name="submit" value="Envoyer">
           </div>
+          <p><?php 
+          echo $_SESSION['text_command'];
+           ?></p>
         </form>
       </div>
     </section>
