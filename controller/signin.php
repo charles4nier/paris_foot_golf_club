@@ -19,7 +19,7 @@ $adminConnected = false;
 
 if (!$resultat)
 {
-    header("Location: http://localhost/footgolf/paris_foot_golf_club/view/maquette.php");
+    header("Location: http://localhost/paris_foot_golf_club/view/maquette.php");
     echo "Connexion refusée";
 }
 elseif (!isset($_SESSION['username'])) {
@@ -27,7 +27,7 @@ elseif (!isset($_SESSION['username'])) {
     $_SESSION['username'] = $resultat['name'];
     echo 'Vous êtes connecté ! <br>';
     echo 'Bonjour ' . $_SESSION['username'];
-    header("Location: http://localhost/footgolf/paris_foot_golf_club/view/eboutique.php");
+    header("Location: http://localhost/paris_foot_golf_club/view/maquette.php");
 
     $adminConnected = true;
     $_SESSION['admin'] =  $adminConnected;
