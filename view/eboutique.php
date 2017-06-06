@@ -2,6 +2,26 @@
   require 'head.php';
  ?>
 <body>
+  <!-- Modal de connection-->
+  <div id="myModal" class="firstModal modal fade" role="dialog">
+    <div class="enveloppe modal-dialog">
+      <!-- Modal content-->
+          <form class="loginPanel" action="../controller/signin.php" method="post">
+            <div class="inputcontainer">
+              <input type="text" class="inputText" name="mail" id="login_mail" required/>
+              <label class="floating-label" for="mail">Votre Email :</label>
+            </div>
+
+            <div class="inputcontainer">
+              <input type="password" class="inputText" name="password" id="login_password" required/>
+              <label class="floating-label" for="password">Votre mot de pass :</label>
+            </div>
+
+            <input class="btn-colored-background" type="submit" name="" value="Se connecter">
+          </form>
+    </div>
+  </div>
+
   <header class="container-fluid">
     <div class="row">
       <div class="col-md-4 text-center logoContainer flexCol alignCenter justifyCenter">
@@ -9,7 +29,17 @@
         <p>Paris Foot Golf Club</p>
       </div>
       <div class="col-md-4 col-md-offset-4 flexRow alignCenter justifyCenter">
-        <a href="profil.html"><button type="button" name="button" class="btn-white-background">Se connecter</button></a>
+
+                  <?php if(isset($_SESSION['admin'])) {
+                  ?>
+                  <button type="button" name="button" class="btn-white-background">Se déconnecter</button>
+                  <?php
+                    } else {
+                  ?>
+                  <button type="button" name="button" class="btn-white-background" data-toggle="modal" data-target="#myModal">Se connecter</button>
+                  <?php
+                    }
+                  ?>
       </div>
     </div>
     <nav class="row text-center">

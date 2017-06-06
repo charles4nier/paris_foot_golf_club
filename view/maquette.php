@@ -174,7 +174,18 @@ require 'head.php';
           <p>Paris Foot Golf Club</p>
         </div>
         <div class="col-md-4 col-md-offset-4 flexRow alignCenter justifyCenter">
+
+          <?php if(isset($_SESSION['admin'])) {
+          ?>
+          <button type="button" name="button" class="btn-white-background">Se déconnecter</button>
+          <?php
+            } else {
+          ?>
           <button type="button" name="button" class="btn-white-background" data-toggle="modal" data-target="#myModal">Se connecter</button>
+          <?php
+            }
+          ?>
+
         </div>
       </div>
       <nav class="row text-center">
