@@ -52,7 +52,11 @@
 
       foreach ($links as $link) { ?>
       <article class="col-md-6">
-        <?php echo '<img src="data:'.utf8_encode($link['type']).';base64,'.base64_encode(stripslashes($link['content'])). '"/>';?>
+        <?php if (isset($_SESSION['admin'])) {
+          echo "<a href='../modele/crudDataBase.php?deleteArticle=" . $link['id'] . "' class='btn-white-background'>Supprimer</a>";
+          echo "<a href='../modele/crudDataBase.php?editArticle=" . $link['id'] . "' class='btn-white-background'>Editer</a>";
+        }
+         echo '<img src="data:'.utf8_encode($link['type']).';base64,'.base64_encode(stripslashes($link['content'])). '"/>';?>
         <p class="col-xs-offset-1 col-xs-4 col-md-4" id="id_image"> Référence article : <?php echo $link['ref']; ?></p>
       </article>
       <?php } ?>

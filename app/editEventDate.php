@@ -24,4 +24,4 @@ if (isset($_POST['Event'][0]) && isset($_POST['Event'][1]) && isset($_POST['Even
 	}
 }
 
-  header("Location: http://localhost/footgolf/paris_foot_golf_club/view/maquette.php");
+  header("Location: http://localhost/paris_foot_golf_club/view/maquette.php");

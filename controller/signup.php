@@ -45,7 +45,7 @@ $req->execute(array(
 	'pack' => $pack
 	));
 
-header("Location: http://localhost/footgolf/paris_foot_golf_club/view/maquette.php");
+header("Location: http://localhost/paris_foot_golf_club/view/maquette.php");
 
 $req->closeCursor(); 
 }

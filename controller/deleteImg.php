@@ -6,4 +6,4 @@ require '../modele/crudDataBase.php';
 
 deleteImg($_GET['id']);
 
-header('Location: http://localhost/footgolf/paris_foot_golf_club/view/eboutique.php');
+header('Location: http://localhost/paris_foot_golf_club/view/eboutique.php');

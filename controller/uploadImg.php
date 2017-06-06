@@ -5,6 +5,6 @@ require '../modele/crudDataBase.php';
 
 uploadImg($fileName, $fileSize, $fileType, $content, $ref);
 
-header('Location: http://localhost/footgolf/paris_foot_golf_club/view/eboutique.php');
+header('Location: http://localhost/paris_foot_golf_club/view/eboutique.php');
 
 

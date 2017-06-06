@@ -20,10 +20,12 @@ function uploadImg ($name, $size, $type, $content, $ref) {
 function deleteImg ($id) {
 	global $bdd;
 
-	$id_image = $_GET['id'];
+	$id_image = $_GET['deleteArticle'];
 	$drop = $bdd->prepare('DELETE FROM upload WHERE id=:id');
 	$drop->execute(array(
 		'id' => $_GET['id']));
 
 	echo "Drop de l'image $id_image effectué";
 }
+
+
