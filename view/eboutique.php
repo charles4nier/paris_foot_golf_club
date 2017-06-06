@@ -23,7 +23,7 @@
 
     <?php if(isset($_SESSION['admin'])) { ?>
       <button type="button" name="button" class="btn-white-background" data-toggle="modal" data-target="#modalEditArticle">+</button>
-        <div id="modalEditArticle" class="firstModal modal fade" role="dialog">
+        <div id="modalEditArticle" class="secondModal modal fade" role="dialog">
             <div class="enveloppe modal-dialog">
                 <!-- Modal content-->
                 <form method="post" action="../controller/uploadImg.php" enctype="multipart/form-data">
