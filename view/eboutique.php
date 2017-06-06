@@ -22,7 +22,33 @@
     <main class="e-boutique container-fluid">
 
     <?php if(isset($_SESSION['admin'])) { ?>
-      <button type="button" name="button" class="btn-white-background" data-toggle="modal" data-target="#add-article">+</button>
+      <button type="button" name="button" class="btn-white-background" data-toggle="modal" data-target="#modalEditArticle">+</button>
+        <div id="modalEditArticle" class="firstModal modal fade" role="dialog">
+            <div class="enveloppe modal-dialog">
+                <!-- Modal content-->
+                <form method="post" action="../controller/uploadImg.php" enctype="multipart/form-data">
+                    <label for="model" class="floating-label">Modèle</label>
+                    <input name="model" type="text" id="model" class="inputText"><br>
+                    <label for="image" class="floating-label">Image</label>
+                    <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
+                    <input type="file" name="image" id="image"> <br>
+                    <input type="submit" name="submit" value="Ajouter" class="btn-colored-background">
+                </form>
+                <form class="loginPanel" action="../controller/signin.php" method="post">
+                    <div class="inputcontainer">
+                        <input type="text" class="inputText" name="mail" id="login_mail" required/>
+                        <label class="floating-label" for="mail">Votre Email :</label>
+                    </div>
+
+                    <div class="inputcontainer">
+                        <input type="password" class="inputText" name="password" id="login_password" required/>
+                        <label class="floating-label" for="password">Votre mot de pass :</label>
+                    </div>
+
+                    <input class="btn-colored-background" type="submit" name="" value="Se connecter">
+                </form>
+            </div>
+        </div>
     <?php } ?>
 
 
