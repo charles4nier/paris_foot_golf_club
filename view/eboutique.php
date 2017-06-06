@@ -27,25 +27,18 @@
             <div class="enveloppe modal-dialog">
                 <!-- Modal content-->
                 <form method="post" action="../controller/uploadImg.php" enctype="multipart/form-data">
-                    <label for="model" class="floating-label">Modèle</label>
-                    <input name="model" type="text" id="model" class="inputText"><br>
-                    <label for="image" class="floating-label">Image</label>
+                  <div class="inputcontainer">
+                    <input name="name" type="text" class="inputText" id="name" class="inputText" required/>
+                    <label for="model" class="floating-label">Nom de l'article</label>
+                  </div>
+                  <div class="inputcontainer">
                     <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
-                    <input type="file" name="image" id="image"> <br>
+                    <input type="file" name="image" id="image">
+                    <label for="image" class="floating-label">Image</label>
+                  </div>
+                  <div class="inputcontainer">
                     <input type="submit" name="submit" value="Ajouter" class="btn-colored-background">
-                </form>
-                <form class="loginPanel" action="../controller/signin.php" method="post">
-                    <div class="inputcontainer">
-                        <input type="text" class="inputText" name="mail" id="login_mail" required/>
-                        <label class="floating-label" for="mail">Votre Email :</label>
-                    </div>
-
-                    <div class="inputcontainer">
-                        <input type="password" class="inputText" name="password" id="login_password" required/>
-                        <label class="floating-label" for="password">Votre mot de pass :</label>
-                    </div>
-
-                    <input class="btn-colored-background" type="submit" name="" value="Se connecter">
+                  </div>
                 </form>
             </div>
         </div>
@@ -62,7 +55,7 @@
         <?php echo '<img src="data:'.utf8_encode($link['type']).';base64,'.base64_encode(stripslashes($link['content'])). '"/>';?>
         <p class="col-xs-offset-1 col-xs-4 col-md-4" id="id_image"> Référence article : <?php echo $link['id']; ?></p>
       </article>
-      <?php } ?> 
+      <?php } ?>
 
       <article class="col-md-6">
         <img src="http://www.footpack.fr/wp-content/uploads/2016/03/Paris-Footgolf-Club.jpg" alt="">
@@ -144,7 +137,7 @@
 
             <input class="btn-colored-background" type="submit" name="submit" value="Envoyer">
           </div>
-          <p><?php 
+          <p><?php
           echo $_SESSION['text_command'];
            ?></p>
         </form>
