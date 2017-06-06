@@ -1,9 +1,8 @@
 <?php
-$map = $bdd->prepare('SELECT * FROM golf WHERE title = :title');
+$map = $bdd->prepare('SELECT * FROM golf WHERE name = :name');
 
 $map->execute(array(
-  'title' => $title
-));
+  'name' => $title));
 
 
 $mapResult = $map->fetch();

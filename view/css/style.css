@@ -38,7 +38,6 @@ td {
 body {
   font-family: 'Cabin', sans-serif;
   font-size: 16px;
-  overflow-x: hidden;
 }
 
 a {
@@ -294,7 +293,6 @@ nav li:last-child::after {
 }
 
 iframe {
-  height: 727px;
   margin-top: 55px;
   box-shadow: 4px 4px 2px 1px rgba(0, 0, 0, 0.2);
 }
@@ -498,6 +496,14 @@ footer ul {
 
 .e-boutique {
   margin-top: 180px;
+}
+
+.e-boutique article {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .e-boutique img {

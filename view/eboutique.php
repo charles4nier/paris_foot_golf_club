@@ -32,7 +32,7 @@
 
                   <?php if(isset($_SESSION['admin'])) {
                   ?>
-                  <button type="button" name="button" class="btn-white-background">Se déconnecter</button>
+                  <a  href="../controller/disconnect.php" type="button" name="button" class="btn-white-background">Se déconnecter</a>
                   <?php
                     } else {
                   ?>
@@ -224,6 +224,6 @@
   <script type="text/javascript" src="js/app.js"></script>
   <script src='js/fullcalendar.js'></script>
   <script src='js/fr.js'></script>
-  
+
 </body>
 </html>

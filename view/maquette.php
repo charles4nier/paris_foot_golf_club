@@ -200,7 +200,7 @@ require 'head.php';
     <div id="accueil" class="flexCol justifyEnd alignCenter footGolfClub">
       <div class="button accessButtonContainer flexRow justifyBetween">
         <button type="button" name="button" class="btn-white-background" data-toggle="modal" data-target="#inscription">S'inscrire au club</button>
-        <a href="#decouverte" class="scrollButton"><button type="button" name="button" class="btn-white-background">Découvrir les ateliers</button></a>
+        <a href="#decouverte" class="scrollButton scrollSpy btn-white-background">Découvrir les ateliers</a>
         <a href="eboutique.php"><button type="button" name="button" class="btn-white-background">Aller à la boutique</button></a>
       </div>
 
@@ -266,20 +266,21 @@ require 'head.php';
                      </div>
                  </div>
 
+
                  <div id="mapContainer" class="col-md-6">
-                <?php require '../app/mapDisplay.php'; ?>
-                   <iframe
-                    <?php
-                    if ($mapResult)
+                   <?php require '../app/mapDisplay.php'; ?>
+                  <iframe
+                   <?php
+                    if ($_SESSION['source'])
                     {
-                      echo "src='" . $mapResult['source'] . "'";
+                      echo "src='" . $_SESSION['source'] . "' ";
                     }
                     else
                     {
                       echo "src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.6117239942373!2d2.6621683156746383!3d48.865613979288256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e61ac1221ac1d3%3A0x615ddb66a7da1135!2sGolf+de+Torcy!5e0!3m2!1sfr!2sfr!4v1496136129002'";
                     }
                     ?>
-                    frameborder="0" style="border:0; width: 100%;" allowfullscreen></iframe>
+                    frameborder='0' style='border:0; width: 575px; height: 426px;' allowfullscreen></iframe>
                  </div>
              </div>
       </section>
@@ -608,12 +609,12 @@ require 'head.php';
             			 url: '../app/mapDisplay.php',
             			 type: "POST",
             		   data: "title=" + $(this).text(),
-            			 success: function() {
-            					$('#mapContainer').load('http://localhost/paris_foot_golf_club/view/maquette.php' + ' #mapContainer');
-            				}
-                    // success: function (data) {
-                    //   alert(data.response);
-                    // }
+            			//  success: function() {
+            			// 		$('#mapContainer').html();
+            			// 	}
+                  success: function (data) {
+                    $('#mapContainer').load('http://localhost/paris_foot_golf_club/view/maquette.php' + ' iframe');
+                  }
             			});
 
                 });
@@ -622,6 +623,10 @@ require 'head.php';
 
           };
         calendar();
+        // let height = $('.fc-view-container').css('height');
+        // $('#mapContainer, ifram').css('width', height);
+        // let width2 =  $('iframe').css('width');
+        // alert(height);
     });
     </script>
   </body>
