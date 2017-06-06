@@ -28,8 +28,8 @@
                 <!-- Modal content-->
                 <form method="post" action="../controller/uploadImg.php" enctype="multipart/form-data">
                   <div class="inputcontainer">
-                    <input name="name" type="text" class="inputText" id="name" class="inputText" required/>
-                    <label for="model" class="floating-label">Nom de l'article</label>
+                    <input name="ref" type="text" class="inputText" id="name" required/>
+                    <label for="model" class="floating-label">Référence de l'article</label>
                   </div>
                   <div class="inputcontainer">
                     <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
@@ -53,7 +53,7 @@
       foreach ($links as $link) { ?>
       <article class="col-md-6">
         <?php echo '<img src="data:'.utf8_encode($link['type']).';base64,'.base64_encode(stripslashes($link['content'])). '"/>';?>
-        <p class="col-xs-offset-1 col-xs-4 col-md-4" id="id_image"> Référence article : <?php echo $link['id']; ?></p>
+        <p class="col-xs-offset-1 col-xs-4 col-md-4" id="id_image"> Référence article : <?php echo $link['ref']; ?></p>
       </article>
       <?php } ?>
 

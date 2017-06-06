@@ -3,15 +3,16 @@ require 'db_access.php';
 
 
 
-function uploadImg ($name, $size, $type, $content) {
+function uploadImg ($name, $size, $type, $content, $ref) {
 	global $bdd;
 
-	$req = $bdd->prepare('INSERT INTO upload(name, size, type, content) VALUES(:name, :size, :type, :content)');
+	$req = $bdd->prepare('INSERT INTO upload(name, size, type, content, ref) VALUES(:name, :size, :type, :content, :ref)');
 	$req->execute(array(
 		'name' => $name,
 		'size' => $size,
 		'type' => $type,
-		'content' => $content
+		'content' => $content,
+		'ref' => $ref
 		));
 	echo "upload effectué";
 }
@@ -25,5 +26,4 @@ function deleteImg ($id) {
 		'id' => $_GET['id']));
 
 	echo "Drop de l'image $id_image effectué";
-}
 }

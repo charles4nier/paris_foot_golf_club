@@ -5,6 +5,7 @@ if(isset($_POST['submit']) && $_FILES['image']['size'] > 0) {
 	$tmpName  = $_FILES['image']['tmp_name'];
 	$fileSize = $_FILES['image']['size'];
 	$fileType = $_FILES['image']['type'];
+	$ref = $_POST['ref'];
 
 	$fp      = fopen($tmpName, 'r');
 	$content = fread($fp, filesize($tmpName));
