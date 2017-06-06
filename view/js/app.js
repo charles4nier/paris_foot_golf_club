@@ -1,5 +1,5 @@
 $(function () {
-  let linkScrollButton = $(".scrollButton");
+  let linkScrollButton = $(".scrollSpy");
 
   linkScrollButton.click(function(e) {
     e.preventDefault();
@@ -10,4 +10,11 @@ $(function () {
       750
     );
   });
+
+
+
+  $('.test').click(function() {
+    alert($(this).attr("data-id"));
+  });
+
 });

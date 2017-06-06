@@ -83,8 +83,8 @@
       foreach ($links as $link) { ?>
       <article class="col-md-6">
         <?php if (isset($_SESSION['admin'])) {
-          echo "<a href='../modele/crudDataBase.php?deleteArticle=" . $link['id'] . "' class='btn-white-background'>Supprimer</a>";
-          echo "<a href='../modele/crudDataBase.php?editArticle=" . $link['id'] . "' class='btn-white-background'>Editer</a>";
+          echo "<a href='../controller/deleteImg.php?deleteArticle=" . $link['id'] . "' class='btn-white-background'>Supprimer</a>";
+          echo "<a href='' class='btn-white-background test' data-id='" . $link['id'] . "'>Editer</a>";
         }
          echo '<img src="data:'.utf8_encode($link['type']).';base64,'.base64_encode(stripslashes($link['content'])). '"/>';?>
         <p class="col-xs-offset-1 col-xs-4 col-md-4" id="id_image"> Référence article : <?php echo $link['ref']; ?></p>
@@ -218,5 +218,12 @@
       </div>
     </aside>
   </footer>
+
+  <script type="text/javascript" src="js/moment.min.js"></script>
+  <script type="text/javascript" src="js/ease.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+  <script src='js/fullcalendar.js'></script>
+  <script src='js/fr.js'></script>
+  
 </body>
 </html>

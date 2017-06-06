@@ -177,7 +177,7 @@ require 'head.php';
 
           <?php if(isset($_SESSION['admin'])) {
           ?>
-          <button type="button" name="button" class="btn-white-background">Se déconnecter</button>
+          <a  href="../controller/disconnect.php" type="button" name="button" class="btn-white-background">Se déconnecter</a>
           <?php
             } else {
           ?>
@@ -190,10 +190,10 @@ require 'head.php';
       </div>
       <nav class="row text-center">
         <ul class="flexRow alignCenter justifyCenter">
-          <li><a href="#accueil" class="scrollButton">Accueil</a></li>
-          <li><a href="#sport"  class="scrollButton">Le sport</a></li>
-          <li><a href="#sponsor" class="scrollButton">Sponsoring </a>
-          <li><a href="#contact" class="scrollButton">Nous contacter</a></li>
+          <li><a href="#accueil" class="scrollButton scrollSpy">Accueil</a></li>
+          <li><a href="#sport"  class="scrollButton scrollSpy">Le sport</a></li>
+          <li><a href="#sponsor" class="scrollButton scrollSpy">Sponsoring </a>
+          <li><a href="#contact" class="scrollButton scrollSpy">Nous contacter</a></li>
         </ul>
       </nav>
     </header>
