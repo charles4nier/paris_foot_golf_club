@@ -597,12 +597,12 @@ require 'head.php';
             			 url: '../app/mapDisplay.php',
             			 type: "POST",
             		   data: "title=" + $(this).text(),
-            			//  success: function() {
-            			// 		$('#mapContainer').load('http://localhost/paris_foot_golf_club/view/maquette.php' + ' #mapContainer');
-            			// 	}
-                    success: function (data) {
-                      alert(data.response);
-                    }
+            			 success: function() {
+            					$('#mapContainer').load('http://localhost/paris_foot_golf_club/view/maquette.php' + ' #mapContainer');
+            				}
+                    // success: function (data) {
+                    //   alert(data.response);
+                    // }
             			});
 
                 });
