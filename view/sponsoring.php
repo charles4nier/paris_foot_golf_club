@@ -110,11 +110,11 @@
       <section id="formulaire-sponsoring" class="row">
         <h2>Choisir un pack</h2>
         <div class="enveloppe formu-achat">
-          <form class="flexRow justifyAround">
+          <form class="flexRow justifyAround" method="post" action="../controller/mail_sponsors.php">
            <div class="packLoisir">
             <div class="flexCol achat">
               <p>Choix du pack</p>
-              <select>
+              <select name="pack">
                 <option value="xs">Pack Birdie</option>
                 <option value="s">Pack Eagle</option>
                 <option value="m">Pack Albatros</option>
@@ -161,7 +161,7 @@
                 <label class="floating-label">Mail :</label>
               </div>
 
-              <input class="btn-colored-background"type="submit" name="" value="Envoyer">
+              <input class="btn-colored-background" type="submit" name="submit" value="Envoyer">
             </div>
           </form>
         </div>

@@ -1,3 +1,12 @@
+td {
+  background-color: white;
+  color: black;
+}
+
+.delete {
+  color: white;
+}
+
 .flexRow, .flexCol {
   display: flex;
 }
@@ -29,6 +38,7 @@
 body {
   font-family: 'Cabin', sans-serif;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 a {
@@ -210,17 +220,6 @@ nav li:last-child::after {
   color: #ffffff;
 }
 
-/*.club > div {
-  padding: 0 30px;
-}*/
-
-/*.club div:last-child {
-  height: 70%;
-  background: url('../img/imgClub2.jpg')  center no-repeat scroll;
-  background-size: cover;
-  border-left: 1px solid white;
-}*/
-
 .club li {
   list-style-type: none;
 }
@@ -284,12 +283,25 @@ nav li:last-child::after {
 /*                découverte              */
 
 .decouverte {
-    background-color:#06172d;
+    background-color:#cf2c31;
     color: white;
     border-top: 1px solid white;
+    padding: 30px 0
  }
 
+.intro-decouverte {
+    margin-bottom: 45px;
+}
 
+iframe {
+  height: 427px;
+  margin-top: 55px;
+  box-shadow: 4px 4px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.fc-view-container {
+  box-shadow: 4px 4px 2px 1px rgba(0, 0, 0, 0.2);
+}
 
  .decouverte h2 {
    margin-top: 25px;
@@ -325,6 +337,9 @@ nav li:last-child::after {
   width: 150px;
 }
 
+#ModalAdd .inputText {
+  width: 200px;
+}
 
 .boutique a {
  color:#509eb0;
@@ -443,7 +458,6 @@ footer {
 }
 
 .sponsor {
-  margin-top: 30px;
   height: 600px;
   background: url('../img/sponsor.jpg') center fixed;
   background-size: cover;

@@ -80,7 +80,7 @@
     <section class="formulaire-achat col-md-6">
       <h2>Commander votre article</h2>
       <div class="enveloppe formu-achat">
-        <form class="flexRow justifyAround" method="post" action="../controller/mail.php">
+        <form class="flexRow justifyAround" method="post" action="../controller/mail_boutique.php">
          <div class="pack-sponsoring">
           <div class="flexCol achat">
             <div class="inputcontainer">

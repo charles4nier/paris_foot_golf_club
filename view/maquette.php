@@ -1,5 +1,14 @@
 <?php
-  require 'head.php';
+
+require_once('../modele/db_access.php');
+require '../modele/calendarReq.php';
+
+// $sql = "SELECT id, title, start, end, color FRDisplay.phpOM events ";
+// $req = $bdd->prepare($sql);
+// $req->execute();
+// $events = $req->fetchAll();
+
+require 'head.php';
  ?>
   <body>
     <!-- Modal qui ouvre la connexion au site -->
@@ -236,55 +245,33 @@
       <section id="decouverte" class="decouverte row">
           <div class="col-md-offset-2 col-md-8">
             <h2>Atelier découverte</h2>
-            <p>Vous voulez découvrir ou simplement jouer au footgolf ? Rien de plus simple, identifier la date et le golf qui vous convient et inscrivez vous. Ce sera l'occasion de partager un bon moment de convivialité et de sportivité avec les joueurs du Paris Footgolf Club.</p>
+            <p class="intro-decouverte">Vous voulez découvrir ou simplement jouer au footgolf ? Rien de plus simple, identifier la date et le golf qui vous convient et inscrivez vous. Ce sera l'occasion de partager un bon moment de convivialité et de sportivité avec les joueurs du Paris Footgolf Club.</p>
           </div>
 
-           <div class="calendarDecouverte col-md-6">
-             <!-- insérer calendar facilement modifiable sur lequel apparaissent toutes les sessions decouvertes (en vert) -->
-             <form class="flexCol alignCenter justifyCenter">
-               <p>Inscription :</p>
-               <div class="inputcontainer">
-                 <input type="text" class="inputText" name="prenomDecouverte" id="prenomDecouverte" required/>
-                 <label class="floating-label" for="prenomDecouverte">Prénom :</label>
-               </div>
 
-               <div class="inputcontainer">
-                 <input type="text" class="inputText" name="nomDecouverte" id="nomDecouverte" required/>
-                 <label class="floating-label" for="nomDecouverte">Nom :</label>
-               </div>
 
-               <div class="inputcontainer">
-                 <input type="mail" class="inputText" name="mailDecouverte" id="mailDecouverte" required/>
-                 <label class="floating-label" for="mailDecouverte">Mail :</label>
-               </div>
+                 <div class="col-md-6 text-center">
+                     <div id="calendar" class="col-centered">
+                     </div>
+                 </div>
 
-               <div class="inputcontainer">
-                 <input type="text" class="inputText" name="telDecouverte" id="telDecouverte" required/>
-                 <label class="floating-label" for="telDecouverte">Téléphone :</label>
-               </div>
-
-               <div class="inputcontainer">
-                 <input type="text" class="inputText" name="refDecouverte" id="refDecouverte" required/>
-                 <label class="floating-label" for="refDecouverte">Référence de l'atelier :</label>
-               </div>
-
-               <textarea name="textareaDecouverte" placeholder="Votre message..."></textarea>
-
-               <input class="btn-colored-background" type="submit" name="" value="S'inscire">
-
-             </form>
-           </div>
-          </div>
-
-          <div class="col-md-6">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.8793959013387!2d2.2508546508203797!3d48.841439109753125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67ac09948a18d%3A0xdd2450406cef2c5c!2sLe+Parc+des+Princes!5e0!3m2!1sen!2sfr!4v1495469069744" width="461" height="615" frameborder="0" style="border:0" allowfullscreen></iframe>
-
-          </div>
+                 <div id="mapContainer" class="col-md-6">
+                <?php require '../app/mapDisplay.php'; ?>
+                   <iframe
+                    <?php
+                    if ($mapResult)
+                    {
+                      echo "src='" . $mapResult['source'] . "'";
+                    }
+                    else
+                    {
+                      echo "src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.6117239942373!2d2.6621683156746383!3d48.865613979288256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e61ac1221ac1d3%3A0x615ddb66a7da1135!2sGolf+de+Torcy!5e0!3m2!1sfr!2sfr!4v1496136129002'";
+                    }
+                    ?>
+                    frameborder="0" style="border:0; width: 100%;" allowfullscreen></iframe>
+                 </div>
+             </div>
       </section>
-
-      </section>
-
-
     </main>
 
     <footer class="container-fluid">
@@ -334,7 +321,297 @@
         </div>
       </aside>
     </footer>
+
+
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="ModalAdd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+      <div class="modal-content">
+      <form class="form-horizontal" method="POST" action="../app/addEvent.php">
+
+        <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Ajouter un évènement</h4>
+        </div>
+        <div class="modal-body">
+
+          <div class="form-group">
+          <label for="title" class="col-sm-2 control-label">Titre</label>
+          <div class="col-sm-10">
+            <select name="title" class="form-control" id="title">
+            <!-- <input type="text" name="title" class="inputText" id="title" value="Titre"> -->
+              <option value="">Sélectionner</option>
+              <option value="Golf de Torcy">Golf de Torcy</option>
+              <option value="Golf du Coudray">Golf du Coudray</option>
+              <option value="Golf du Lys">Golf du Lys</option>
+            </select>
+          </div>
+          </div>
+          <div class="form-group">
+          <label for="color" class="col-sm-2 control-label">Couleur</label>
+          <div class="col-sm-4">
+            <select name="color" class="form-control" id="color">
+              <option value="">Sélectionner</option>
+              <option style="color:#0071c5;" value="#0071c5">&#9724; Golf de Torcy</option>
+              <option style="color:#40E0D0;" value="#40E0D0">&#9724; Golf du Coudray</option>
+              <option style="color:#008000;" value="#008000">&#9724; Golf du Lys</option>
+            </select>
+          </div>
+          </div>
+          <div class="form-group">
+          <label for="start" class="col-sm-2 float">Date de début</label>
+          <div class="col-sm-10">
+            <input type="text" name="start" class="inputText" id="start" readonly>
+          </div>
+          </div>
+          <div class="form-group">
+          <label for="end" class="col-sm-2 control-label">Date de fin</label>
+          <div class="col-sm-10">
+            <input type="text" name="end" class="inputText" id="end" readonly>
+          </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+        <button type="submit" class="btn btn-primary">Sauvergarder</button>
+        </div>
+      </form>
+      </div>
+      </div>
+    </div>
+
+
+    <div class="modal fade" id="ModalEdit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			<form class="form-horizontal" method="POST" action="../app/editEventTitle.php">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Editer l'évènement</h4>
+			  </div>
+			  <div class="modal-body">
+
+          <div class="form-group">
+          <label for="title" class="col-sm-2 control-label">Titre</label>
+          <div class="col-sm-10">
+            <select name="title" class="form-control" id="title">
+            <!-- <input type="text" name="title" class="inputText" id="title" value="Titre"> -->
+              <option value="">Sélectionner</option>
+              <option value="Golf de Torcy">Golf de Torcy</option>
+              <option value="Golf du Coudray">Golf du Coudray</option>
+              <option value="Golf du Lys">Golf du Lys</option>
+            </select>
+          </div>
+          </div>
+          <div class="form-group">
+          <label for="color" class="col-sm-2 control-label">Couleur</label>
+          <div class="col-sm-4">
+            <select name="color" class="form-control" id="color">
+              <option value="">Sélectionner</option>
+              <option style="color:;" value="#0071c5">&#9724; Golf de Torcy</option>
+              <option style="color:#40E0D0;" value="#40E0D0">&#9724; Golf du Coudray</option>
+              <option style="color:#008000;" value="#008000">&#9724; Golf du Lys</option>
+            </select>
+          </div>
+          </div>
+				    <div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+						  <div class="checkbox">
+							<label class="delete"><input type="checkbox" name="delete"> Delete event</label>
+						  </div>
+						</div>
+					</div>
+
+				  <input type="hidden" name="id" class="form-control" id="id">
+
+
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+				<button type="submit" class="btn btn-primary">Sauvegarder</button>
+			  </div>
+			</form>
+			</div>
+		  </div>
+		</div>
+
+
+
+
+
+
+
+    <script type="text/javascript" src="js/moment.min.js"></script>
     <script type="text/javascript" src="js/ease.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
+    <script src='js/fullcalendar.js'></script>
+    <script src='js/fr.js'></script>
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+
+        let calendar = function() {
+          $.get( "../app/calendar.php")
+            .done(function( data ) {
+              if(data.response === true) {
+
+                $('#calendar').fullCalendar({
+
+                  header: {
+                   left: 'prev',
+                   center: 'title',
+                   right: 'today, next'
+                  },
+
+                  editable: true,
+                  selectable: true,
+            			selectHelper: true,
+
+                  select: function(start, end) {
+            				$('#ModalAdd #start').val(moment(start).format('YYYY-MM-DD HH:mm:ss'));
+            				$('#ModalAdd #end').val(moment(end).format('YYYY-MM-DD HH:mm:ss'));
+            				$('#ModalAdd').modal('show');
+            			},
+
+                  eventRender: function(event, element) {
+                    element.bind('dblclick', function() {
+                      $('#ModalEdit #id').val(event.id);
+                      $('#ModalEdit #title').val(event.title);
+                      $('#ModalEdit #color').val(event.color);
+                      $('#ModalEdit').modal('show');
+                    });
+                  },
+
+                  eventDrop: function(event, delta, revertFunc) { // si changement de position
+				                edit(event);
+			            },
+
+			            eventResize: function(event,dayDelta,minuteDelta,revertFunc) { // si changement de longueur
+				                edit(event);
+			            },
+
+                  events: [
+              			<?php foreach($events as $event):
+
+              				$start = explode(" ", $event['start']);
+              				$end = explode(" ", $event['end']);
+              				if($start[1] == '00:00:00'){
+              					$start = $start[0];
+              				}else{
+              					$start = $event['start'];
+              				}
+              				if($end[1] == '00:00:00'){
+              					$end = $end[0];
+              				}else{
+              					$end = $event['end'];
+              				}
+              			?>
+              				{
+              					id: '<?php echo $event['id']; ?>',
+              					title: '<?php echo $event['title']; ?>',
+              					start: '<?php echo $start; ?>',
+              					end: '<?php echo $end; ?>',
+              					color: '<?php echo $event['color']; ?>',
+              				},
+              			<?php endforeach; ?>
+              			]
+                });
+
+                function edit(event){
+            			start = event.start.format('YYYY-MM-DD HH:mm:ss');
+            			if(event.end){
+            				end = event.end.format('YYYY-MM-DD HH:mm:ss');
+            			}else{
+            				end = start;
+            			}
+
+            			id =  event.id;
+
+            			Event = [];
+            			Event[0] = id;
+            			Event[1] = start;
+            			Event[2] = end;
+
+            			$.ajax({
+            			 url: '../app/editEventDate.php',
+            			 type: "POST",
+            			 data: {Event:Event},
+            			 success: function(rep) {
+            					if(rep == 'OK'){
+            						alert('Saved');
+            					}else{
+            						alert('Could not be saved. try again.');
+            					}
+            				}
+            			});
+            		}
+
+                $('#calendar').css('cursor', 'pointer');
+
+              } else {
+
+                $('#calendar').fullCalendar({
+
+                  header: {
+                   left: 'prev',
+                   center: 'title',
+                   right: 'today, next'
+                  },
+
+                  selectable: false,
+            			selectHelper: true,
+
+                  events: [
+            			     <?php foreach($events as $event):
+
+              				$start = explode(" ", $event['start']);
+              				$end = explode(" ", $event['end']);
+              				if($start[1] == '00:00:00'){
+              					$start = $start[0];
+              				}else{
+              					$start = $event['start'];
+              				}
+              				if($end[1] == '00:00:00'){
+              					$end = $end[0];
+              				}else{
+              					$end = $event['end'];
+              				}
+              			     ?>
+              				{
+              					id: '<?php echo $event['id']; ?>',
+              					title: '<?php echo $event['title']; ?>',
+              					start: '<?php echo $start; ?>',
+              					end: '<?php echo $end; ?>',
+              					color: '<?php echo $event['color']; ?>',
+              				},
+              			<?php endforeach; ?>
+              			]
+                });
+
+                $('.fc-content').css('cursor', 'pointer');
+                $('.fc-title').click(function() {
+                  $.ajax({
+            			 url: '../app/mapDisplay.php',
+            			 type: "POST",
+            		   data: "title=" + $(this).text(),
+            			//  success: function() {
+            			// 		$('#mapContainer').load('http://localhost/paris_foot_golf_club/view/maquette.php' + ' #mapContainer');
+            			// 	}
+                    success: function (data) {
+                      alert(data.response);
+                    }
+            			});
+
+                });
+              }
+            });
+
+          };
+        calendar();
+    });
+    </script>
   </body>
 </html>
