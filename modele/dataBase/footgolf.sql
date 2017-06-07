@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  localhost:3306
--- Généré le :  Mer 07 Juin 2017 à 15:56
+-- Généré le :  Mer 07 Juin 2017 à 16:06
 -- Version du serveur :  5.7.18-0ubuntu0.17.04.1
 -- Version de PHP :  7.0.18-0ubuntu0.17.04.1
 
@@ -84,8 +84,8 @@ INSERT INTO `golf` (`id`, `name`, `adresse`, `source`) VALUES
 
 CREATE TABLE `upload` (
   `id` int(11) NOT NULL,
-  `name` text NOT NULL,
-  `type` varchar(30) NOT NULL,
+  `name` text CHARACTER SET utf8 NOT NULL,
+  `type` varchar(150) CHARACTER SET utf8 NOT NULL,
   `size` int(11) NOT NULL,
   `content` mediumblob NOT NULL,
   `ref` int(255) NOT NULL
