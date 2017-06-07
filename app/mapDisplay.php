@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$title = "";
+$title = '';
 
 if (isset($_POST['title'])) {
     $title = $_POST['title'];

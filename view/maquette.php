@@ -104,8 +104,8 @@ require 'head.php';
 
 
            <div id="mapContainer" class="col-md-6">
-             <?php require '../app/mapDisplay.php'; ?>
-             <iframe id='iframe'
+             <?php require '../app/mapDisplay.php';?>
+             <iframe
               <?php
                if ($_SESSION['source'])
                {
@@ -183,6 +183,20 @@ require 'head.php';
   <script type="text/javascript">
 
   $(document).ready(function() {
+
+      let displayMap = function() {
+        $('.fc-content').css('cursor', 'pointer');
+        $('.fc-title').click(function() {
+          $.ajax({
+            url: '../app/mapDisplay.php',
+            type: "POST",
+            data: "title=" + $(this).text(),
+            success: function() {
+              $('#mapContainer').load('maquette.php iframe');
+            }
+          });
+        });
+      }
 
       let calendar = function() {
         $.get( "../app/calendar.php")
@@ -319,22 +333,13 @@ require 'head.php';
             					color: '<?php echo $event['color']; ?>',
             				},
             			<?php endforeach; ?>
-                ],
-                eventClick: function(calEvent, jsEvent, view) {
-                  $.ajax({
-                    url: '../app/mapDisplay.php',
-                    type: "POST",
-                    data: "title=" + $(this).text()
-                  })
-                  .done(function() {
-                    $('#mapContainer').load('maquette.php #iframe');
-                  });
-
-                }
+                ]
               });
-              $('.fc-content').css('cursor', 'pointer');
+
+              displayMap();
+
               $('#calendar').click(function() {
-                $('.fc-content').css('cursor', 'pointer');
+                displayMap();
               });
            }
          });

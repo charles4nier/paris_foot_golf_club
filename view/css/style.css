@@ -459,15 +459,14 @@ input:not(:focus):valid ~ .floating-label {
 }
 
 .sponsor {
-  position: relative;
-  height: 550px;
+  height: 530px;
   background: url('../img/sponsor.jpg') center fixed;
   background-size: cover;
   border-top: 1px solid white;
 }
 
 .sponsorRow {
-  margin-top: 450px;
+  margin-top: 430px;
   background-color: white;
   height: 100px;
   padding: 25px 0;
