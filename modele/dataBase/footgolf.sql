@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  localhost:3306
--- Généré le :  Mar 06 Juin 2017 à 15:58
+-- Généré le :  Mer 07 Juin 2017 à 15:56
 -- Version du serveur :  5.7.18-0ubuntu0.17.04.1
 -- Version de PHP :  7.0.18-0ubuntu0.17.04.1
 
@@ -49,9 +49,10 @@ INSERT INTO `events` (`id`, `title`, `color`, `start`, `end`) VALUES
 (8, 'Dinner', '#0071c5', '2016-01-12 20:00:00', '0000-00-00 00:00:00'),
 (9, 'Birthday Party', '#FFD700', '2016-01-14 07:00:00', '2016-01-14 07:00:00'),
 (10, 'Double click to change', '#008000', '2016-01-28 00:00:00', '0000-00-00 00:00:00'),
-(15, 'Rebonjour', '#0071c5', '2017-06-01 00:00:00', '2017-06-02 00:00:00'),
-(16, 'Deuxième Golf', '#008000', '2017-06-01 00:00:00', '2017-06-02 00:00:00'),
-(23, 'Golf du Coudray', '#40E0D0', '2017-06-01 00:00:00', '2017-06-02 00:00:00');
+(15, 'Rebonjour', '#0071c5', '2017-06-15 00:00:00', '2017-06-16 00:00:00'),
+(16, 'Deuxième Golf', '#008000', '2017-05-30 00:00:00', '2017-05-31 00:00:00'),
+(23, 'Golf du Coudray', '#40E0D0', '2017-06-01 00:00:00', '2017-06-02 00:00:00'),
+(25, 'Golf de Torcy', '#0071c5', '2017-06-17 00:00:00', '2017-06-18 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -83,7 +84,7 @@ INSERT INTO `golf` (`id`, `name`, `adresse`, `source`) VALUES
 
 CREATE TABLE `upload` (
   `id` int(11) NOT NULL,
-  `name` varchar(30) NOT NULL,
+  `name` text NOT NULL,
   `type` varchar(30) NOT NULL,
   `size` int(11) NOT NULL,
   `content` mediumblob NOT NULL,
@@ -117,7 +118,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `firstname`, `lastname`, `pack`, `mail`, `pass`, `age`, `sexe`, `cm`, `ville`, `adresse`, `phone`, `admin`) VALUES
-(1, 'admin', 'BucKz', 'packLoisirs', 'lefevre.maxime96@gmail.com', '0706025b2bbcec1ed8d64822f4eccd96314938d0', 20, 'Alien', 'Non', 'Paris', '11, rue du clos', 768313937, 0);
+(1, 'admin', 'BucKz', 'packLoisirs', 'lefevre.maxime96@gmail.com', '0706025b2bbcec1ed8d64822f4eccd96314938d0', 20, 'Alien', 'Non', 'Paris', '11, rue du clos', 768313937, 1);
 
 --
 -- Index pour les tables exportées
@@ -145,7 +146,8 @@ ALTER TABLE `upload`
 -- Index pour la table `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `mail` (`mail`);
 
 --
 -- AUTO_INCREMENT pour les tables exportées
@@ -155,7 +157,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT pour la table `events`
 --
 ALTER TABLE `events`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 --
 -- AUTO_INCREMENT pour la table `golf`
 --
@@ -165,7 +167,7 @@ ALTER TABLE `golf`
 -- AUTO_INCREMENT pour la table `upload`
 --
 ALTER TABLE `upload`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT pour la table `users`
 --
