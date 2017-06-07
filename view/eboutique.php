@@ -87,7 +87,7 @@
           echo "<a href='' class='btn-white-background test' data-id='" . $link['id'] . "'>Editer</a>";
         }
          echo '<img src="data:'.utf8_encode($link['type']).';base64,'.base64_encode(stripslashes($link['content'])). '"/>';?>
-        <p class="col-xs-offset-1 col-xs-4 col-md-4" id="id_image"> Référence article : <?php echo $link['ref']; ?></p>
+        <p class="col-xs-offset-1 col-xs-4 col-md-4 refArticle" id="id_image"> Référence article : <?php echo $link['ref']; ?></p>
       </article>
       <?php } ?>
 
