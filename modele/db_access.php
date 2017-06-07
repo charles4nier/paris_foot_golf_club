@@ -1,6 +1,6 @@
 <?php
-$user = 'root';
-$pwd = 'coucou1948';
+$user = 'phpmyadmin';
+$pwd = 'max';
 try {
     $bdd = new PDO('mysql:host=localhost;dbname=footgolf;charset=utf8', $user, $pwd, array(PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
 }

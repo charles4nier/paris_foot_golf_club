@@ -31,13 +31,14 @@ function deleteImg ($id) {
 function updateImg ($id, $name, $size, $type, $content, $ref) {
 	global $bdd;
 
-	$req = $bdd->prepare('INSERT INTO upload(name, size, type, content, ref) VALUES(:name, :size, :type, :content, :ref)');
+	$req = $bdd->prepare('UPDATE INTO upload(name, size, type, content, ref) VALUES(:name, :size, :type, :content, :ref) WHERE id=:id');
 	$req->execute(array(
 		'name' => $name,
 		'size' => $size,
 		'type' => $type,
 		'content' => $content,
-		'ref' => $ref
+		'ref' => $ref,
+		'id' => $_GET['updateArticle']
 		));
 	echo "modification effectuée";
 }

@@ -18,9 +18,3 @@ if(isset($_POST['submit']) && $_FILES['image']['size'] > 0) {
   }
 
 }
-
-if (isset($_GET['id'])) {
-
-
-	
-}

@@ -512,7 +512,7 @@ footer ul {
   min-height: 100vh;
 }
 
-.e-boutique article {
+.e-boutique .articles {
   display: flex;
   flex-direction: column;
   justify-content: center;
