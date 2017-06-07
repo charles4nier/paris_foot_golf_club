@@ -101,7 +101,7 @@
                   </div>
                   <div class="inputcontainer">
                     <input type="hidden" name="MAX_FILE_SIZE" value="5242880" />
-                    <input type="file" name="image" id="image">
+                    <input type="file" name="image" id="image" accept=".jpeg,.jpg,.png,.gif,.bmp">
                     <label for="image" class="floating-label">Image</label>
                   </div>
                   <div class="inputcontainer">

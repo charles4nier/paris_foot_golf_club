@@ -28,4 +28,18 @@ function deleteImg ($id) {
 	echo "Drop de l'image $id_image effectué";
 }
 
+function updateImg ($id, $name, $size, $type, $content, $ref) {
+	global $bdd;
+
+	$req = $bdd->prepare('INSERT INTO upload(name, size, type, content, ref) VALUES(:name, :size, :type, :content, :ref)');
+	$req->execute(array(
+		'name' => $name,
+		'size' => $size,
+		'type' => $type,
+		'content' => $content,
+		'ref' => $ref
+		));
+	echo "modification effectuée";
+}
+
 
