@@ -62,7 +62,7 @@
                     <label for="model" class="floating-label">Référence de l'article</label>
                   </div>
                   <div class="inputcontainer">
-                    <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
+                    <input type="hidden" name="MAX_FILE_SIZE" value="5242880" />
                     <input type="file" name="image" id="image">
                     <label for="image" class="floating-label">Image</label>
                   </div>
