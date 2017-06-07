@@ -508,20 +508,36 @@ footer ul {
   margin-bottom: 30px;
   margin-right: 20px;
   width: 250px;
-  /*border: 1px solid #fafafa;*/
+  border: 1px solid #d4d4d4;
   padding: 0;
 
 }
 
+.e-boutique article .crudButtonContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  /*background-color: #06172d;*/
+}
+
+.articles {
+  transform: scale(1);
+  transition: all .2s ease-in-out;
+}
+
+.articles:hover {
+  transform: scale(1.1);
+}
+
 .e-boutique article img {
   width: 100%;
+  border-bottom: 1px solid #d4d4d4;
 }
 
 .e-boutique article p {
   padding-top: 25px;
   margin-bottom: 25px;
   width: 100%;
-  border-top: 1px solid #d4d4d4;
 }
 
 .e-boutique p {

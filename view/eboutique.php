@@ -81,10 +81,9 @@
   $links = $bdd->query('SELECT * FROM upload');
 
       foreach ($links as $link) { ?>
-      <article class="col-md-6">
+      <article class="col-md-6 articles">
         <?php if (isset($_SESSION['admin'])) {
-          echo "<a href='../controller/deleteImg.php?deleteArticle=" . $link['id'] . "' class='btn-white-background'>Supprimer</a>";
-          echo "<a href='' class='btn-white-background test' data-id='" . $link['id'] . "'>Editer</a>";
+          echo "<div class='crudButtonContainer'><a href='../controller/deleteImg.php?deleteArticle=" . $link['id'] . "' class='btn-white-background'>Supprimer</a><a href='' class='btn-white-background test' data-id='" . $link['id'] . "'>Editer</a></div>";
         }
          echo '<img src="data:'.utf8_encode($link['type']).';base64,'.base64_encode(stripslashes($link['content'])). '"/>';?>
         <p class="col-xs-offset-1 col-xs-4 col-md-4 refArticle" id="id_image"> Référence article : <?php echo $link['ref']; ?></p>
