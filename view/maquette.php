@@ -120,21 +120,26 @@ require 'head.php';
            </div>
       </section>
     </main>
-
-    <footer class="container-fluid">
-
-      <div id="sponsor" class="row sponsor">
-        <div class="button accessButtonContainer flexRow justifyBetween">
+    <div id="sponsor" class="container-fluid sponsor">
+      <div  class="row sponsorRow">
+        <div class="sponsorContainer col-md-offset-2 col-md-4">
+          <ul class="list-inline">
+            <li><a href="https://www.facebook.com/paris.footgolf/?fref=ts"><img src="img/logo_pariscola.png" height="45" alt="le logo facebook"></a></li>
+            <li><a href="https://www.footgolf-inside.com"><img src="img/inside.png" alt="le logo footgolf-inside" height="45"></a></li>
+          </ul>
+        </div>
+        <div class="sponsorContainer col-md-offset-2 col-md-4">
           <a href="sponsoring.php"><button type="button" name="button" class="btn-white-background">Nous sponsoriser</button></a>
         </div>
       </div>
+    </div>
 
+    <footer class="container-fluid">
       <aside class="row">
         <div class="col-md-3 text-center contact">
           <ul class="list-inline">
             <li><a href="https://www.facebook.com/paris.footgolf/?fref=ts"><img src="img/fb.png" height="30" alt="le logo facebook"></a></li>
             <li><a href="https://www.youtube.com/paris.footgolf"><img src="img/youtube.png" height="30" alt="le logo youtube"></a></li>
-            <li><a href="https://www.footgolf-inside.com"><img src="img/inside.png" alt="le logo footgolf-inside" height="30"></a></li>
           </ul>
         </div>
 

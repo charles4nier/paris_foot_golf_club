@@ -59,17 +59,39 @@
       foreach ($links as $link) { ?>
       <article class="col-md-6 articles">
         <?php if (isset($_SESSION['admin'])) {
-          echo "<div class='crudButtonContainer'><a href='../controller/deleteImg.php?deleteArticle=" . $link['id'] . "' class='btn-crud-background'><img src='img/pencil-24.png' width='12'></a><a href='' class='btn-crud-background test' data-id='" . $link['id'] . "'><img src='img/x-mark-24.png' width=12></a></div>";
+          echo "<div class='crudButtonContainer'><a href='../controller/deleteImg.php?deleteArticle=" . $link['id'] . "' class='btn-crud-background'><img src='img/x-mark-24.png' width='12'></a><a href='' data-toggle='modal' data-target='#modalEditArticle' class='btn-crud-background editButton' data-id='" . $link['id'] . "'><img src='img/pencil-24.png' width=12></a></div>";
         }
          echo '<img src="data:'.utf8_encode($link['type']).';base64,'.base64_encode(stripslashes($link['content'])). '" class="imgArticle"/>';?>
         <p class="col-xs-offset-1 col-xs-4 col-md-4 refArticle" id="id_image"> Référence article : <?php echo $link['ref']; ?></p>
       </article>
+      <div id="modalEditArticle" class="secondModal modal fade" role="dialog">
+          <div class="enveloppe modal-dialog">
+              <!-- Modal content-->
+              <form method="post" action="../controller/updateImg.php" enctype="multipart/form-data">
+                <div class="inputcontainer">
+                  <input name="idArticle" type="hidden" class="inputText" id="idArticle" value=""/>
+                </div>
+                <div class="inputcontainer">
+                  <input name="ref" type="text" class="inputText" id="name" required/>
+                  <label for="model" class="floating-label">Référence de l'article</label>
+                </div>
+                <div class="inputcontainer">
+                  <input type="hidden" name="MAX_FILE_SIZE" value="5242880" />
+                  <input type="file" name="image" id="image">
+                  <label for="image" class="floating-label">Image</label>
+                </div>
+                <div class="inputcontainer">
+                  <input type="submit" name="submit" value="Ajouter" class="btn-colored-background">
+                </div>
+              </form>
+          </div>
+      </div>
       <?php } ?>
     </section>
     <section class="formulaire-achat col-md-6">
       <?php if(isset($_SESSION['admin'])) { ?>
-        <button type="button" name="button" class="btn-crud-background" data-toggle="modal" data-target="#modalEditArticle"><img src="img/plus-16.png" alt="" width='12'></button>
-        <div id="modalEditArticle" class="secondModal modal fade" role="dialog">
+        <button type="button" name="button" class="btn-crud-background" data-toggle="modal" data-target="#modalCreateArticle"><img src="img/plus-16.png" alt="" width='12'></button>
+        <div id="modalCreateArticle" class="secondModal modal fade" role="dialog">
             <div class="enveloppe modal-dialog">
                 <!-- Modal content-->
                 <form method="post" action="../controller/uploadImg.php" enctype="multipart/form-data">

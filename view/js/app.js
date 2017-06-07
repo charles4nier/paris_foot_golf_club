@@ -1,5 +1,5 @@
 $(function () {
-  
+
 
 
   let linkScrollButton = $(".scrollSpy");
@@ -16,8 +16,9 @@ $(function () {
 
 
 
-  $('.test').click(function() {
-    alert($(this).attr("data-id"));
+  $('.editButton').click(function() {
+    let id = ($(this).attr("data-id"));
+    $('#idArticle').val(id);
   });
 
 });

@@ -458,6 +458,32 @@ input:not(:focus):valid ~ .floating-label {
    font-size: 11px;
 }
 
+.sponsor {
+  position: relative;
+  height: 550px;
+  background: url('../img/sponsor.jpg') center fixed;
+  background-size: cover;
+  border-top: 1px solid white;
+}
+
+.sponsorRow {
+  margin-top: 450px;
+  background-color: white;
+  height: 100px;
+  padding: 25px 0;
+}
+
+/*.sponsor div {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 350px;
+}
+
+.sponsor a {
+  display: inline-block;
+  margin-left: 55%;
+}*/
+
 
 /* footer */
 
@@ -468,23 +494,7 @@ footer {
   color: #ffffff;
 }
 
-.sponsor {
-  height: 600px;
-  background: url('../img/sponsor.jpg') center fixed;
-  background-size: cover;
-  border-top: 1px solid white;
-}
 
-.sponsor div {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 350px;
-}
-
-.sponsor a {
-  display: inline-block;
-  margin-left: 55%;
-}
 
 .contact {
   padding: 20px 80px;
@@ -559,11 +569,11 @@ footer ul {
 
 .e-boutique .formu-achat {
   margin-top: 30px;
-  padding: 10px;
-}
-.e-boutique .formu-achat {
+  padding: 10px 10px 30px 10px;
+  box-shadow: 0px 5px 5px rgba(100, 100, 100, 0.49);
   color: white;
 }
+
 .e-boutique .formu-achat .quantité {
   margin-top: 9px;
 
