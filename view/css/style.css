@@ -115,6 +115,19 @@ form {
   border: 1px solid rgba(207,44,49,1);
 }
 
+.btn-crud-background {
+  border-radius: 0;
+  border: 1px solid rgba(207,44,49,0);
+  padding: 10px 15px;
+  background: rgba(207,44,49,1);
+  transition: all .2s ease-in-out;
+  color: white;
+}
+
+.btn-crud-background:hover {
+  background: #06172d;
+}
+
 .enveloppe {
   background-color: #cf2c31;
   margin-bottom: 50px;
@@ -529,7 +542,7 @@ footer ul {
   transform: scale(1.1);
 }
 
-.e-boutique article img {
+.e-boutique article .imgArticle {
   width: 100%;
   border-bottom: 1px solid #d4d4d4;
 }

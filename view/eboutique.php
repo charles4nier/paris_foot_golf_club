@@ -51,8 +51,24 @@
   </header>
     <main class="e-boutique container-fluid">
 
-    <?php if(isset($_SESSION['admin'])) { ?>
-      <button type="button" name="button" class="btn-white-background" data-toggle="modal" data-target="#modalEditArticle">+</button>
+    <section class="article col-md-6">
+  <?php require '../modele/db_access.php';
+
+  $links = $bdd->query('SELECT * FROM upload');
+
+      foreach ($links as $link) { ?>
+      <article class="col-md-6 articles">
+        <?php if (isset($_SESSION['admin'])) {
+          echo "<div class='crudButtonContainer'><a href='../controller/deleteImg.php?deleteArticle=" . $link['id'] . "' class='btn-crud-background'><img src='img/pencil-24.png' width='12'></a><a href='' class='btn-crud-background test' data-id='" . $link['id'] . "'><img src='img/x-mark-24.png' width=12></a></div>";
+        }
+         echo '<img src="data:'.utf8_encode($link['type']).';base64,'.base64_encode(stripslashes($link['content'])). '" class="imgArticle"/>';?>
+        <p class="col-xs-offset-1 col-xs-4 col-md-4 refArticle" id="id_image"> Référence article : <?php echo $link['ref']; ?></p>
+      </article>
+      <?php } ?>
+    </section>
+    <section class="formulaire-achat col-md-6">
+      <?php if(isset($_SESSION['admin'])) { ?>
+        <button type="button" name="button" class="btn-crud-background" data-toggle="modal" data-target="#modalEditArticle"><img src="img/plus-16.png" alt="" width='12'></button>
         <div id="modalEditArticle" class="secondModal modal fade" role="dialog">
             <div class="enveloppe modal-dialog">
                 <!-- Modal content-->
@@ -72,38 +88,7 @@
                 </form>
             </div>
         </div>
-    <?php } ?>
-
-
-    <section class="article col-md-6">
-  <?php require '../modele/db_access.php';
-
-  $links = $bdd->query('SELECT * FROM upload');
-
-      foreach ($links as $link) { ?>
-      <article class="col-md-6 articles">
-        <?php if (isset($_SESSION['admin'])) {
-          echo "<div class='crudButtonContainer'><a href='../controller/deleteImg.php?deleteArticle=" . $link['id'] . "' class='btn-white-background'>Supprimer</a><a href='' class='btn-white-background test' data-id='" . $link['id'] . "'>Editer</a></div>";
-        }
-         echo '<img src="data:'.utf8_encode($link['type']).';base64,'.base64_encode(stripslashes($link['content'])). '"/>';?>
-        <p class="col-xs-offset-1 col-xs-4 col-md-4 refArticle" id="id_image"> Référence article : <?php echo $link['ref']; ?></p>
-      </article>
       <?php } ?>
-
-      <article class="col-md-6">
-        <img src="http://www.footpack.fr/wp-content/uploads/2016/03/Paris-Footgolf-Club.jpg" alt="">
-        <p>Référence article : 34</p>
-      </article>
-      <article class="col-md-6">
-        <img src="http://www.footpack.fr/wp-content/uploads/2016/03/Paris-Footgolf-Club.jpg" alt="">
-        <p>Référence article : 35</p>
-      </article>
-      <article class="col-md-6">
-        <img src="http://www.footpack.fr/wp-content/uploads/2016/03/Paris-Footgolf-Club.jpg" alt="">
-        <p>Référence article : 36</p>
-      </article>
-    </section>
-    <section class="formulaire-achat col-md-6">
       <h2>Commander votre article</h2>
       <div class="enveloppe formu-achat">
         <form class="flexRow justifyAround" method="post" action="../controller/mail_boutique.php">
