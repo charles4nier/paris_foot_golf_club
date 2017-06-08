@@ -10,5 +10,6 @@ if (isset($_POST['title'])) {
 
     if ($mapResult) {
       $_SESSION['source'] = $mapResult['source'];
+      $_SESSION['name'] = $mapResult['name'];
     }
 }

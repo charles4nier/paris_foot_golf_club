@@ -95,7 +95,42 @@ require 'head.php';
             <p class="intro-decouverte">Vous voulez découvrir ou simplement jouer au footgolf ? Rien de plus simple, identifier la date et le golf qui vous convient et inscrivez vous. Ce sera l'occasion de partager un bon moment de convivialité et de sportivité avec les joueurs du Paris Footgolf Club.</p>
           </div>
           <div class="test">
-            <div class="col-md-6 text-center">
+            <div class="col-md-6">
+              <div class="animated atelierForm" style="border: 1px solid white;">
+                <h2 id="titreAtelierForm">
+                  Vous inscrire au
+                <?php if ($_SESSION['name'])
+                {
+                  echo $_SESSION['name'];
+                } ?>
+                 :</h2>
+                <form class="loginPanel" action="../controller/mail_calendar.php" method="post">
+                  <input type="hidden" name="AtelierGolf" id="AtelierGolf" value="<?php echo $_SESSION['name'];?>"/>
+                  <div class="inputcontainer">
+                    <input type="text" class="inputText" name="AtelierFormName" id="AtelierFormName" required/>
+                    <label class="floating-label" for="AtelierFormName">Votre nom :</label>
+                  </div>
+                  <div class="inputcontainer">
+                    <input type="text" class="inputText" name="AtelierFormPrenom" id="AtelierFormPrenom" required/>
+                    <label class="floating-label" for="AtelierFormPrenom">Votre prénom :</label>
+                  </div>
+                  <div class="inputcontainer">
+                    <input type="text" class="inputText" name="mail" id="AtelierForm" required/>
+                    <label class="floating-label" for="mail">Votre email :</label>
+                  </div>
+                  <p style="margin-top: -15px; margin-bottom: 5px; font-size: 16px;">Choix de la plage horraire :</p>
+                  <select style="margin-bottom: 25px;" name="horraire">
+                    <option value="14h">14h-15H</option>
+                    <option value="15h">15h-16h</option>
+                    <option value="16h">16h-17h</option>
+                    <option value="17h">17h-18h</option>
+                    <option value="18h">18h-19h</option>
+                  </select>
+
+                  <textarea name="name" rows="8" cols="80"></textarea>
+                    <input class="btn-colored-background" type="submit" name="" value="envoyer">
+                </form>
+              </div>
                  <div id="calendar" class="col-centered">
                  </div>
              </div>
@@ -146,9 +181,15 @@ require 'head.php';
             type: "POST",
             data: "title=" + $(this).text(),
             success: function() {
+              $('#titreAtelierForm').load('index.php #titreAtelierForm');
               $('#mapContainer').load('index.php iframe');
             }
           });
+
+          $('#calendar').fadeOut(200);
+          $('.atelierForm').css('display', 'flex').addClass('fadeInLeft');
+          $('html, body').animate({
+          scrollTop : $('iframe').offset().top - 220});
         });
       }
 

@@ -12,4 +12,5 @@ session_start();
     <link rel="stylesheet" href="../view/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Cabin:500" rel="stylesheet">
     <link rel='stylesheet' href='../view/css/fullcalendar.css' />
+    <link rel='stylesheet' href='../view/css/animate.css' />
   </head>
