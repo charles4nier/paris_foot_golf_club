@@ -122,14 +122,12 @@ require 'head.php';
     </main>
     <div id="sponsor" class="container-fluid sponsor">
       <div  class="row sponsorRow">
-        <div class="sponsorContainer col-md-offset-2 col-md-4">
-          <ul class="list-inline">
+        <div class="sponsorContainer col-md-offset-4 col-md-6">
+          <ul class="list-inline right">
             <li><a href="https://www.facebook.com/paris.footgolf/?fref=ts"><img src="../view/img/logo_pariscola.png" height="45" alt="le logo facebook"></a></li>
             <li><a href="https://www.footgolf-inside.com"><img src="../view/img/inside.png" alt="le logo footgolf-inside" height="45"></a></li>
+            <li style="margin-left: 45px;"><a href="sponsoring.php" class="btn-white-background">Nous sponsoriser</a></li>
           </ul>
-        </div>
-        <div class="sponsorContainer col-md-offset-2 col-md-4">
-          <a href="sponsoring.php"><button type="button" name="button" class="btn-white-background">Nous sponsoriser</button></a>
         </div>
       </div>
     </div>
