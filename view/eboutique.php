@@ -72,16 +72,15 @@
                   <input name="idArticle" type="hidden" class="inputText" id="idArticle" value=""/>
                 </div>
                 <div class="inputcontainer">
-                  <input name="ref" type="text" class="inputText" id="name" required/>
+                  <input type="hidden" name="MAX_FILE_SIZE" value="5242880" />
+                  <input type="file" name="refEditImage" id="refEditImage">
+                </div>
+                <div class="inputcontainer">
+                  <input name="refEditArticle" type="text" class="inputText" id="refEditArticle" required/>
                   <label for="model" class="floating-label">Référence de l'article</label>
                 </div>
                 <div class="inputcontainer">
-                  <input type="hidden" name="MAX_FILE_SIZE" value="5242880" />
-                  <input type="file" name="image" id="image">
-                  <label for="image" class="floating-label">Image</label>
-                </div>
-                <div class="inputcontainer">
-                  <input type="submit" name="submit" value="Ajouter" class="btn-colored-background">
+                  <input type="submit" name="submit" value="Modifier" class="btn-colored-background">
                 </div>
               </form>
           </div>

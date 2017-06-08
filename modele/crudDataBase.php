@@ -26,17 +26,19 @@ function deleteImg ($id) {
 	echo "Drop de l'image $id_image effectué";
 }
 
-function updateImg ($id, $name, $size, $type, $content, $ref) {
+// function updateImg ($id, $name, $size, $type, $content, $ref) {
+function updateImg ($id, $ref, $name, $size, $type, $content) {
 	global $bdd;
-
-	$req = $bdd->prepare('UPDATE INTO upload(name, size, type, content, ref) VALUES(:name, :size, :type, :content, :ref) WHERE id=:id');
+  //
+	// $req = $bdd->prepare('UPDATE INTO upload(name, size, type, content, ref) VALUES(:name, :size, :type, :content, :ref) WHERE id=:id');
+  $req = $bdd->prepare('UPDATE upload SET ref=:newRef WHERE id=:id');
 	$req->execute(array(
-		'name' => $name,
-		'size' => $size,
-		'type' => $type,
-		'content' => $content,
-		'ref' => $ref,
-		'id' => $_GET['updateArticle']
+		'newRef' => $ref,
+		// 'size' => $size,
+		// 'type' => $type,
+		// 'content' => $content,
+		// 'ref' => $ref,
+		'id' => $id
 		));
 	echo "modification effectuée";
 }
