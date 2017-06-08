@@ -179,6 +179,12 @@ require 'head.php';
         setTimeout(function() {
             $('.atelierForm').css('display', 'none').removeClass('fadeOutUp');
             $('#calendar').fadeIn(300);
+            $("html, body").animate(
+              {
+                scrollTop: $('#decouverte').offset().top
+              },
+              550
+            );
         }, 1000);
       });
 
