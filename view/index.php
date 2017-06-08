@@ -96,7 +96,7 @@ require 'head.php';
           </div>
           <div class="test">
             <div class="col-md-6">
-              <div class="animated atelierForm" style="border: 1px solid white;">
+              <div class="animated atelierForm">
                 <h2 id="titreAtelierForm">
                   Vous inscrire au
                 <?php if ($_SESSION['name'])
@@ -126,10 +126,12 @@ require 'head.php';
                     <option value="17h">17h-18h</option>
                     <option value="18h">18h-19h</option>
                   </select>
-
                   <textarea name="name" rows="8" cols="80"></textarea>
-                    <input class="btn-colored-background" type="submit" name="" value="envoyer">
                 </form>
+                <div class="" style="width: 60%; display: flex; justify-content: space-between;">
+                  <button class="btn-colored-background testOutForm" type="button" name="button">Annuler</button>
+                  <button class="btn-colored-background" type="button" name="button">Envoyer</button>
+                </div>
               </div>
                  <div id="calendar" class="col-centered">
                  </div>
@@ -137,10 +139,9 @@ require 'head.php';
 
 
              <div id="mapContainer" class="col-md-6">
-               <?php require '../app/mapDisplay.php';?>
                <iframe
                 <?php
-                 if ($_SESSION['source'])
+                 if (isset($_SESSION['source']))
                  {
                    echo "src='" . $_SESSION['source'] . "' ";
                  }
@@ -173,6 +174,14 @@ require 'head.php';
 
   $(document).ready(function() {
 
+      $('.testOutForm').click(function() {
+        $('.atelierForm').addClass('fadeOutUp');
+        setTimeout(function() {
+            $('.atelierForm').css('display', 'none').removeClass('fadeOutUp');
+            $('#calendar').fadeIn(300);
+        }, 1000);
+      });
+
       let displayMap = function() {
         $('.fc-content').css('cursor', 'pointer');
         $('.fc-title').click(function() {
@@ -186,10 +195,11 @@ require 'head.php';
             }
           });
 
-          $('#calendar').fadeOut(200);
+          $('#calendar').fadeOut(100);
+          if($('.fadeOutLeft')) {
+            $(this).removeClass('fadeOutLeft');
+          }
           $('.atelierForm').css('display', 'flex').addClass('fadeInLeft');
-          $('html, body').animate({
-          scrollTop : $('iframe').offset().top - 220});
         });
       }
 
