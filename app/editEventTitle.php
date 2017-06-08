@@ -40,4 +40,4 @@ if (isset($_POST['delete']) && isset($_POST['id'])){
 	}
 }
 
-  header("Location: http://localhost/paris_foot_golf_club/view/maquette.php");
+  header("Location: http://localhost/paris_foot_golf_club/controller/index.php");

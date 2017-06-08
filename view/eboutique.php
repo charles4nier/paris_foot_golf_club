@@ -25,7 +25,7 @@
   <header class="container-fluid">
     <div class="row">
       <div class="col-md-4 text-center logoContainer flexCol alignCenter justifyCenter">
-        <img class="logo" src="img/logo.jpg" height="100px" alt="">
+        <img class="logo" src="../view/img/logo.jpg" height="100px" alt="">
         <p>Paris Foot Golf Club</p>
       </div>
       <div class="col-md-4 col-md-offset-4 flexRow alignCenter justifyCenter">
@@ -44,7 +44,7 @@
     </div>
     <nav class="row text-center">
       <ul class="flexRow alignCenter justifyCenter">
-        <li><a href="maquette.php" class="scrollButton">Accueil</a></li>
+        <li><a href="index.php" class="scrollButton">Accueil</a></li>
         <li><a href="sponsoring.php" class="scrollButton">Sponsoring</a></li>
       </ul>
     </nav>
@@ -59,7 +59,7 @@
       foreach ($links as $link) { ?>
       <article class="col-md-6 articles">
         <?php if (isset($_SESSION['admin'])) {
-          echo "<div class='crudButtonContainer'><a href='../controller/deleteImg.php?deleteArticle=" . $link['id'] . "' class='btn-crud-background'><img src='img/x-mark-24.png' width='12'></a><a href='' data-toggle='modal' data-target='#modalEditArticle' class='btn-crud-background editButton' data-id='" . $link['id'] . "'><img src='img/pencil-24.png' width=12></a></div>";
+          echo "<div class='crudButtonContainer'><a href='../controller/deleteImg.php?deleteArticle=" . $link['id'] . "' class='btn-crud-background'><img src='../view/img/x-mark-24.png' width='12'></a><a href='' data-toggle='modal' data-target='#modalEditArticle' class='btn-crud-background editButton' data-id='" . $link['id'] . "'><img src='../view/img/pencil-24.png' width=12></a></div>";
         }
          echo '<img src="data:'.utf8_encode($link['type']).';base64,'.base64_encode(stripslashes($link['content'])). '" class="imgArticle"/>';?>
         <p class="col-xs-offset-1 col-xs-4 col-md-4 refArticle" id="id_image"> Référence article : <?php echo $link['ref']; ?></p>
@@ -90,7 +90,7 @@
     </section>
     <section class="formulaire-achat col-md-6">
       <?php if(isset($_SESSION['admin'])) { ?>
-        <button type="button" name="button" class="btn-crud-background" data-toggle="modal" data-target="#modalCreateArticle"><img src="img/plus-16.png" alt="" width='12'></button>
+        <button type="button" name="button" class="btn-crud-background" data-toggle="modal" data-target="#modalCreateArticle"><img src="../view/img/plus-16.png" alt="" width='12'></button>
         <div id="modalCreateArticle" class="secondModal modal fade" role="dialog">
             <div class="enveloppe modal-dialog">
                 <!-- Modal content-->
@@ -184,52 +184,7 @@
       </div>
     </section>
   </main>
-  <footer class="container-fluid">
-    <aside class="row">
-      <div class="col-md-3 text-center contact">
-        <ul class="list-inline">
-          <li><a href="https://www.facebook.com/paris.footgolf/?fref=ts"><img src="img/fb.png" height="30" alt="le logo facebook"></a></li>
-          <li><a href="https://www.youtube.com/paris.footgolf"><img src="img/youtube.png" height="30" alt="le logo youtube"></a></li>
-          <li><a href="https://www.footgolf-inside.com"><img src="img/inside.png" alt="le logo footgolf-inside" height="30"></a></li>
-        </ul>
-      </div>
-
-      <div id="contact" class="col-md-6 contact">
-        <p>Contact : <a href="#">paris.footgolf@gmail.com</a></p>
-        <ul class="list-inline">
-          <li>
-            <ul>
-              <li>Yann BERTIN</li>
-              <li>Président</li>
-
-            </ul>
-          </li>
-
-          <li>
-            <ul>
-              <li>Mickaël LAFON</li>
-              <li>Secrétaire</li>
-
-            </ul>
-          </li>
-
-          <li>
-            <ul>
-              <li>Guilain BIHAN</li>
-              <li>Trésorier</li>
-
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </aside>
-  </footer>
-
-  <script type="text/javascript" src="js/moment.min.js"></script>
-  <script type="text/javascript" src="js/ease.js"></script>
-  <script type="text/javascript" src="js/app.js"></script>
-  <script src='js/fullcalendar.js'></script>
-  <script src='js/fr.js'></script>
+  <?php require 'footer.php' ?>
 
 </body>
 </html>

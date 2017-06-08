@@ -1,8 +1,6 @@
 <?php
 require 'db_access.php';
 
-
-
 function uploadImg ($name, $size, $type, $content, $ref) {
 	global $bdd;
 
@@ -42,5 +40,3 @@ function updateImg ($id, $name, $size, $type, $content, $ref) {
 		));
 	echo "modification effectuée";
 }
-
-

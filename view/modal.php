@@ -1,6 +1,3 @@
-<?php
-
-?>
 <!-- Modal qui ouvre la connexion au site -->
 <div id="myModal" class="firstModal modal fade" role="dialog">
   <div class="enveloppe modal-dialog">

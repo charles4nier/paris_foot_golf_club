@@ -1,7 +1,4 @@
 <?php
-
-require_once('../modele/db_access.php');
-require '../modele/calendarReq.php';
 require 'head.php';
  ?>
   <body>
@@ -9,7 +6,7 @@ require 'head.php';
     <header class="container-fluid">
       <div class="row">
         <div class="col-md-4 text-center logoContainer flexCol alignCenter justifyCenter">
-          <img class="logo" src="img/logo.jpg" height="100px" alt="">
+          <img class="logo" src="../view/img/logo.jpg" height="100px" alt="">
           <p>Paris Foot Golf Club</p>
         </div>
         <div class="col-md-4 col-md-offset-4 flexRow alignCenter justifyCenter">
@@ -68,22 +65,22 @@ require 'head.php';
             <p>Jouer au football avec élégance, sur un terrain de golf, selon les règles du golf, tel pourrait être la définition du Footgolf.</p>
             <div class="col-md-offset-1 col-md-5 concept">
 
-              <h3><img src="img/Wind Speed 48-52-50.png" alt="">Un dress code</h3>
+              <h3><img src="../view/img/Wind Speed 48-52-50.png" alt="">Un dress code</h3>
               <p>Le Footgolf, c'est une véritable identité vestimentaire : Polo, bermudas, chaussettes à losange montantes et bérets sont alors de sortie sur le green.</p>
             </div>
             <div class="col-md-5 concept">
 
-              <h3><img src="img/Soccer Ball Filled-50.png" alt="">Un ballon</h3>
+              <h3><img src="../view/img/Soccer Ball Filled-50.png" alt="">Un ballon</h3>
               <p>Taille 5 uniquement, vous serez vite pris par le virus des ballons officiels de matchs.</p>
             </div>
             <div class="col-md-offset-1 col-md-5 concept">
 
-              <h3><img src="img/Soccer Filled-50.png" alt="">Une frappe</h3>
+              <h3><img src="../view/img/Soccer Filled-50.png" alt="">Une frappe</h3>
               <p> Tout en technique : drive, approche, putt... à moins d'être golfeur ces termes ne vous disent pas grand chose mais ils vont vite rentrer dans votre langage.</p>
             </div>
             <div class="col-md-5 concept">
 
-              <h3><img src="img/Wind Speed 48-52-50.png" alt="">Un trou</h3>
+              <h3><img src="../view/img/Wind Speed 48-52-50.png" alt="">Un trou</h3>
               <p>Certes plus grand que celui des golfeurs, mais c'est pas pour autant que c'est plus simple !</p>
             </div>
 
@@ -97,35 +94,38 @@ require 'head.php';
             <h2>Atelier découverte</h2>
             <p class="intro-decouverte">Vous voulez découvrir ou simplement jouer au footgolf ? Rien de plus simple, identifier la date et le golf qui vous convient et inscrivez vous. Ce sera l'occasion de partager un bon moment de convivialité et de sportivité avec les joueurs du Paris Footgolf Club.</p>
           </div>
-          <div class="col-md-6 text-center">
-               <div id="calendar" class="col-centered">
-               </div>
-           </div>
+          <div class="test">
+            <div class="col-md-6 text-center">
+                 <div id="calendar" class="col-centered">
+                 </div>
+             </div>
 
 
-           <div id="mapContainer" class="col-md-6">
-             <?php require '../app/mapDisplay.php';?>
-             <iframe
-              <?php
-               if ($_SESSION['source'])
-               {
-                 echo "src='" . $_SESSION['source'] . "' ";
-               }
-               else
-               {
-                 echo "src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.6117239942373!2d2.6621683156746383!3d48.865613979288256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e61ac1221ac1d3%3A0x615ddb66a7da1135!2sGolf+de+Torcy!5e0!3m2!1sfr!2sfr!4v1496136129002'";
-               }
-               ?>
-               frameborder='0' style='border:0; width: 575px; height: 426px;' allowfullscreen></iframe>
-           </div>
+             <div id="mapContainer" class="col-md-6">
+               <?php require '../app/mapDisplay.php';?>
+               <iframe
+                <?php
+                 if ($_SESSION['source'])
+                 {
+                   echo "src='" . $_SESSION['source'] . "' ";
+                 }
+                 else
+                 {
+                   echo "src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.6117239942373!2d2.6621683156746383!3d48.865613979288256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e61ac1221ac1d3%3A0x615ddb66a7da1135!2sGolf+de+Torcy!5e0!3m2!1sfr!2sfr!4v1496136129002'";
+                 }
+                 ?>
+                 frameborder='0' style='border:0; width: 100%; height: 428px;' allowfullscreen></iframe>
+             </div>
+          </div>
+
       </section>
     </main>
     <div id="sponsor" class="container-fluid sponsor">
       <div  class="row sponsorRow">
         <div class="sponsorContainer col-md-offset-2 col-md-4">
           <ul class="list-inline">
-            <li><a href="https://www.facebook.com/paris.footgolf/?fref=ts"><img src="img/logo_pariscola.png" height="45" alt="le logo facebook"></a></li>
-            <li><a href="https://www.footgolf-inside.com"><img src="img/inside.png" alt="le logo footgolf-inside" height="45"></a></li>
+            <li><a href="https://www.facebook.com/paris.footgolf/?fref=ts"><img src="../view/img/logo_pariscola.png" height="45" alt="le logo facebook"></a></li>
+            <li><a href="https://www.footgolf-inside.com"><img src="../view/img/inside.png" alt="le logo footgolf-inside" height="45"></a></li>
           </ul>
         </div>
         <div class="sponsorContainer col-md-offset-2 col-md-4">
@@ -134,51 +134,7 @@ require 'head.php';
       </div>
     </div>
 
-    <footer class="container-fluid">
-      <aside class="row">
-        <div class="col-md-3 text-center contact">
-          <ul class="list-inline">
-            <li><a href="https://www.facebook.com/paris.footgolf/?fref=ts"><img src="img/fb.png" height="30" alt="le logo facebook"></a></li>
-            <li><a href="https://www.youtube.com/paris.footgolf"><img src="img/youtube.png" height="30" alt="le logo youtube"></a></li>
-          </ul>
-        </div>
-
-        <div id="contact" class="col-md-6 contact">
-          <p>Contact : <a href="#">paris.footgolf@gmail.com</a></p>
-          <ul class="list-inline">
-            <li>
-              <ul>
-                <li>Yann BERTIN</li>
-                <li>Président</li>
-
-              </ul>
-            </li>
-
-            <li>
-              <ul>
-                <li>Mickaël LAFON</li>
-                <li>Secrétaire</li>
-
-              </ul>
-            </li>
-
-            <li>
-              <ul>
-                <li>Guilain BIHAN</li>
-                <li>Trésorier</li>
-
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </aside>
-    </footer>
-
-  <script type="text/javascript" src="js/moment.min.js"></script>
-  <script type="text/javascript" src="js/ease.js"></script>
-  <script type="text/javascript" src="js/app.js"></script>
-  <script src='js/fullcalendar.js'></script>
-  <script src='js/fr.js'></script>
+  <?php require 'footer.php'; ?>
 
   <script type="text/javascript">
 
@@ -192,7 +148,7 @@ require 'head.php';
             type: "POST",
             data: "title=" + $(this).text(),
             success: function() {
-              $('#mapContainer').load('maquette.php iframe');
+              $('#mapContainer').load('index.php iframe');
             }
           });
         });

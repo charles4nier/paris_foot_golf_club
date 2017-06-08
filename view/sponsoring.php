@@ -5,7 +5,7 @@
   <header class="container-fluid">
     <div class="row">
       <div class="col-md-4 text-center logoContainer flexCol alignCenter justifyCenter">
-        <img class="logo" src="img/logo.jpg" height="100px" alt="">
+        <img class="logo" src="../view/img/logo.jpg" height="100px" alt="">
         <p>Paris Foot Golf Club</p>
       </div>
       <div class="col-md-4 col-md-offset-4 flexRow alignCenter justifyCenter">
@@ -14,7 +14,7 @@
     </div>
     <nav class="row text-center">
       <ul class="flexRow alignCenter justifyCenter">
-        <li><a href="maquette.php" class="scrollButton">Accueil</a></li>
+        <li><a href="index.php" class="scrollButton">Accueil</a></li>
         <li><a href="eboutique.php" class="scrollButton">Boutique</a></li>
       </ul>
     </nav>
